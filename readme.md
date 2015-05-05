@@ -2,7 +2,10 @@
 Read the Wiki for further information
 
 # Pull requests
-Create a feature branch and a PR from that in order to merge it to master
+Create a feature branch and a PR from that in order to merge it to master.
+```
+> git co -b branch-name
+```
 
 #### Installation
 
@@ -10,7 +13,7 @@ To run application you need to have **node.js** and **gulp** installed. Gulp can
 
   > npm install -g gulp
 
-Git clone to folder and run install commands get required libraries
+Git clone to clone the repo to local machine. Run install commands documented below to get required libraries.
 
 ```
 > git clone git@bitbucket.org:mondaydigital/jalo.git
