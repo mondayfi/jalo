@@ -1,0 +1,21 @@
+// Atoms
+//
+// Atoms are the most basic buildingblocks
+//
+// Styleguide 2.0
+
+// Buttons
+//
+// Atoms are the most basic buildingblocks
+//
+// <div class="ja-button">button</div>
+//
+// Styleguide 2.1
+
+.ja-button {
+  padding: 8px 16px;
+  display: inline-block;
+  border-radius: 3px;
+  text-decoration: none;
+  background: $color-purple;
+}

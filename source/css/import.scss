@@ -1,10 +1,5 @@
-/* Vendor */
-@import "../../bower_components/normalize.css/normalize.css";
-
-/* Global */
-@import "_variables.scss";
-@import "_mixins.scss";
-@import "grid.scss";
-
-/* Modules */
-@import "modules/ja-button.scss";
+@import "_variables";
+@import "_mixins";
+@import "_grid";
+@import "_type";
+@import "_atoms";
