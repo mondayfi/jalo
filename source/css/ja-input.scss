@@ -1,0 +1,40 @@
+.ja_input {
+  position: relative;
+  @include font-title;
+
+  &__input {
+    @include transition-all;
+    background-color: rgba(255,255,255, 0.2);
+    border: none;
+    border-bottom: 1px solid $color-black;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 100%;
+    margin: 0 0 2rem 0;
+    padding: 0 0 0 0.75rem;
+    box-shadow: none;
+
+    &:focus {
+      background-color: rgba(255,255,255, 0.5);
+      border-bottom: 1px solid $color-white;
+
+     + .ja_input__label {
+        color: $color-white;
+        font-size: 0.8rem;
+        transform: translateY(-110%);
+     }
+    }
+  }
+
+  &__label {
+    @include transition-all;
+    color: $color-black;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.75rem;
+    font-size: 100%;
+    cursor: text;
+  }
+}

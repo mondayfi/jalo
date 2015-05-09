@@ -3,3 +3,80 @@
 // Font styling.
 //
 // Styleguide 1.0
+
+body {
+  @include font-body;
+  color: $color-black;
+  font-size: 1.3125em;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+
+.ja-supersizetitle {
+  @include font-title;
+  font-weight: 200;
+  margin: 0;
+  letter-spacing: -1px;
+  font-size: 120px;
+  line-height: 1.125em;
+  margin-bottom: 2rem;
+  @include breakpoint(tablet-and-up) {
+    font-size: 160px;
+  }
+}
+
+.ja-h1,
+%ja-h1 {
+  @include font-title;
+  margin: 0;
+  letter-spacing: -1px;
+  font-size: 48px;
+  line-height: 1.125em;
+  @include breakpoint(tablet-and-up) {
+    font-size: 64px;
+  }
+}
+
+.ja-h2,
+%ja-h2 {
+  @include font-title;
+  letter-spacing: -1px;
+  font-size: 32px;
+  line-height: 1.125em;
+  @include breakpoint(tablet-and-up) {
+    font-size: 42px;
+  }
+}
+%mo-h2--fontbody {
+  @include font-body;
+}
+
+.ja-h3,
+%ja-h3 {
+  font-size: 24px;
+  line-height: 1.5em;
+  font-weight: 200;
+  @include breakpoint(tablet-and-up) {
+    font-size: 30px;
+  }
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+strong {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.mo-smalltext {
+  font-size: 14px;
+  @include breakpoint(tablet-and-up) {
+    font-size: 16px;
+  }
+}

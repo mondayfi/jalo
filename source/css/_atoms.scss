@@ -8,7 +8,13 @@
 //
 // Atoms are the most basic buildingblocks
 //
-// <div class="ja-button">button</div>
+// .ja-button--purple - purple color
+// .ja-button--green - green color
+// .ja-button--black - black color
+// Default - No color
+//
+// markup:
+// <div class="ja-button {$modifiers}">button</div>
 //
 // Styleguide 2.1
 
@@ -17,5 +23,22 @@
   display: inline-block;
   border-radius: 3px;
   text-decoration: none;
-  background: $color-purple;
+  @include font-title;
+  @include transition-all;
+
+  &--purple {
+    @include btn-theme($color-purple);
+  }
+
+  &--green {
+    @include btn-theme($color-green);
+  }
+
+  &--white {
+    @include btn-theme--invert($color-white, $color-black);
+  }
+  &--fullwidth {
+    display: block;
+    width: 1005;
+  }
 }

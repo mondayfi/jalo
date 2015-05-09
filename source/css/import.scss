@@ -1,5 +1,17 @@
-@import "_variables";
-@import "_mixins";
-@import "_grid";
-@import "_type";
-@import "_atoms";
+/* Vendor */
+@import "normalize";
+
+/* Definitions  */
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_grid.scss";
+@import "_type.scss";
+@import "_atoms.scss";
+
+/* Global */
+@import "global.scss";
+@import "helper-classes.scss";
+
+/* Pages */
+@import "ja-splash.scss";
+@import "ja-input.scss";
