@@ -28,5 +28,5 @@ node_modules
 bower_components
 tmp
 source/js/bundle.js
-source/js/bundle.js
+source/js/bundle.js.map
 dist
