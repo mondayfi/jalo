@@ -24,8 +24,7 @@ gulp.task('css', function () {
     .pipe(sass({
       sourcemap: true,
       style: "compressed",
-      errLogToConsole: true,
-      includePaths: ['bower_components/normalize.css/']
+      errLogToConsole: true
     }))
     .on('error', function (error) {
       console.log(error);

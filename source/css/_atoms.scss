@@ -23,6 +23,7 @@
   display: inline-block;
   border-radius: 3px;
   text-decoration: none;
+  text-align: center;
   @include font-title;
   @include transition-all;
 
@@ -39,6 +40,7 @@
   }
   &--fullwidth {
     display: block;
-    width: 1005;
+    width: 100%;
+
   }
 }
