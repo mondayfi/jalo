@@ -2,6 +2,8 @@ html {
   position: relative;
   height: 100%;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 *, *:before, *:after {
@@ -11,8 +13,10 @@ html {
 
 body {
   height: 100%;
+  margin: 0;
+  padding: 0;
+  background: $color-lightwhite;
 }
-*
 
 .ja-bg {
   background-image: url("../images/jalo_splash_bg.jpg");
