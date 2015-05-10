@@ -1,0 +1,13 @@
+.ja-textaligncenter {
+  text-align: center;
+}
+
+.ja-textitalic {
+  font-style: italic;
+}
+
+.ja-textcolor {
+  &--white {
+    color: $color-white;
+  }
+}

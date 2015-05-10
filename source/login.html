@@ -18,22 +18,24 @@
       <div class="ja-grid">
         <div class="ja-splash">
           <h1 class="ja-textaligncenter ja-supersizetitle ja-textcolor--white">Jalo</h1>
-          <div class="ja-splash__buttons">
-            <a href="login.html" class="ja-button ja-button--purple">Kirjaudu</a>
-            <a href="#" class="ja-button ja-button--white">Rekisteröidy</a>
-          </div>
+          <form>
+            <div class="ja_input">
+              <input id="kayttajatunnus" type="text" class="ja_input__input">
+              <label for="kayttajatunnus" class="ja_input__label">Käyttäjätunnus</label>
+            </div>
+            <div class="ja_input">
+              <input id="password" type="password" class="ja_input__input">
+              <label for="password" class="ja_input__label">Salasana</label>
+            </div>
+             <a href="details.html" class="ja-button ja-button--purple ja-button--fullwidth">Kirjaudu</a>
+          </form>
         </div>
       </div>
     </div>
-<!--
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.js"><\/script>')</script>
 
--->  
-    <script src="bundle.js"></script>
-
-<!--
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
--->  
     </body>
 </html>

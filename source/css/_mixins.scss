@@ -32,3 +32,41 @@
     clear: both;
   }
 }
+
+@mixin font-title {
+  font-family: "nimbus-sans", sans-serif;
+}
+
+@mixin font-body {
+  font-family: "freight-text-pro",sans-serif;
+}
+
+@mixin transition-all {
+  transition: all .15s ease-in;
+}
+
+@mixin btn-theme($btn-color, $btn-text-color: #fff) {
+  background-color: $btn-color;
+  color: $btn-text-color;
+
+  &:hover {
+    background-color: lighten($btn-color, 10%);
+  }
+
+  &:active {
+    background-color: lighten($btn-color, 5%);
+  }
+}
+
+@mixin btn-theme--invert($btn-color, $btn-text-color: #fff) {
+  background-color: $btn-color;
+  color: $btn-text-color;
+
+  &:hover {
+    background-color: darken($btn-color, 10%);
+  }
+
+  &:active {
+    background-color: darken($btn-color, 5%);
+  }
+}

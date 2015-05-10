@@ -1,0 +1,61 @@
+// Grid
+//
+// We use an awesome grid in Jalo.
+//
+// Styleguide 3.0
+
+// ja-grid
+//
+// This is setup to be awesome on all devices
+//
+// markup:
+// <div class="ja-grid">
+//  Here's the content
+// </div>
+//
+// Styleguide 3.1
+
+.ja-grid {
+  position: relative;
+  margin: 0 auto;
+
+  @include breakpoint(phone) {
+    margin: 0 10px;
+  }
+
+  @include breakpoint(phone-large) {
+    max-width: $content-size-phone-large;
+  }
+
+  @include breakpoint(tablet) {
+    max-width: $content-size-tablet;
+  }
+
+  @include breakpoint(laptop) {
+    max-width: $content-size-laptop;
+  }
+
+  @include breakpoint(desktop) {
+    max-width: $content-size-desktop;
+  }
+}
+
+// Breakpoint mixin
+//
+// We have this awesome mixin for using breakpoints.
+// Breakpoints names are the following:
+//
+// phone - 0 ↔ 479px
+// phone-large - 480px ↔ 639px
+// phone-large-and-up - 480px →
+// tablet - 640px ↔ 959px
+// tablet-and-up - 640px →
+// laptop - 960px ↔ 1279px
+// laptop-and-up - 960px →
+// desktop - 1280px →
+//
+// markup:
+//  @include breakpoint({$modifiers}) {
+//  }
+//
+// Styleguide 3.2

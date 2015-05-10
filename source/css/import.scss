@@ -1,10 +1,18 @@
 /* Vendor */
-@import "../../bower_components/normalize.css/normalize.css";
 
-/* Global */
+/* Definitions  */
 @import "_variables.scss";
 @import "_mixins.scss";
-@import "grid.scss";
+@import "_grid.scss";
+@import "_zindex.scss";
+@import "_type.scss";
+@import "_atoms.scss";
 
-/* Modules */
-@import "modules/ja-button.scss";
+/* Global */
+@import "global.scss";
+@import "helper-classes.scss";
+
+/* Pages */
+@import "ja-splash.scss";
+@import "ja-input.scss";
+@import "ja-topnav.scss";

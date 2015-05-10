@@ -1,0 +1,29 @@
+html {
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: $color-lightwhite;
+}
+
+.ja-bg {
+  background-image: url("../images/jalo_splash_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}

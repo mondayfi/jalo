@@ -1,0 +1,46 @@
+// Atoms
+//
+// Atoms are the most basic buildingblocks
+//
+// Styleguide 2.0
+
+// Buttons
+//
+// Atoms are the most basic buildingblocks
+//
+// .ja-button--purple - purple color
+// .ja-button--green - green color
+// .ja-button--black - black color
+// Default - No color
+//
+// markup:
+// <div class="ja-button {$modifiers}">button</div>
+//
+// Styleguide 2.1
+
+.ja-button {
+  padding: 8px 16px;
+  display: inline-block;
+  border-radius: 3px;
+  text-decoration: none;
+  text-align: center;
+  @include font-title;
+  @include transition-all;
+
+  &--purple {
+    @include btn-theme($color-purple);
+  }
+
+  &--green {
+    @include btn-theme($color-green);
+  }
+
+  &--white {
+    @include btn-theme--invert($color-white, $color-black);
+  }
+  &--fullwidth {
+    display: block;
+    width: 100%;
+
+  }
+}
