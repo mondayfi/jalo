@@ -4,7 +4,17 @@ var pkg = require('./package.json');
 var watch = require('gulp-watch');
 var sass = require('gulp-sass');
 var rename = require('gulp-rename');
+var gutil = require('gulp-util');
 var reload = browserSync.reload;
+
+// browserify dependencies
+var sourcemaps = require('gulp-sourcemaps');
+var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
+var browserify = require('browserify')
+var watchify = require('watchify');
+
+var bundler;
 
 var config = {
   version: pkg.version,
@@ -60,6 +70,29 @@ gulp.task('watch', function() {
     port: config.port
   });
 });
+
+// browserify task, very very early version
+gulp.task('js', js);
+function js() {
+  gutil.log('browserify bundle created');
+      var tmp = browserify('./source/js/main.js', watchify.args);
+      // tmp.transform(browserifyHandlebars);
+      // tmp.transform(riotify);
+      bundler = tmp;
+
+      bundler.bundle()
+        // log errors if they happen
+          .on('error', gutil.log.bind(gutil, 'Browserify Error'))
+          .pipe(source('bundle.js'))
+        // optional, remove if you dont want sourcemaps
+          .pipe(buffer())
+          .pipe(sourcemaps.init({loadMaps: true})) // loads map from browserify file
+          .pipe(sourcemaps.write('./'))
+          .pipe(gulp.dest('./source/js/'));
+          // .pipe(livereload());
+
+  // bundleThis(bundles);
+}
 
 gulp.task('default', ['watch']);
 gulp.task('deploy', ['css', 'images', 'scripts', 'fonts', 'html']);
