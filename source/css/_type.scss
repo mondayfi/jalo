@@ -44,8 +44,10 @@ body {
 %ja-h2 {
   @include font-title;
   letter-spacing: -1px;
+  font-weight: 200;
   font-size: 32px;
   line-height: 1.125em;
+  margin: 0;
 
   @include breakpoint(tablet-and-up) {
     font-size: 42px;
