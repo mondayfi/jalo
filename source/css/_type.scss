@@ -12,7 +12,8 @@ body {
   font-weight: 300;
 }
 
-.ja-supersizetitle {
+.ja-supersizetitle,
+%ja-supersizetitle {
   @include font-title;
   font-weight: 200;
   margin: 0;
@@ -20,6 +21,7 @@ body {
   font-size: 120px;
   line-height: 1.125em;
   margin-bottom: 2rem;
+
   @include breakpoint(tablet-and-up) {
     font-size: 160px;
   }
@@ -32,6 +34,7 @@ body {
   letter-spacing: -1px;
   font-size: 48px;
   line-height: 1.125em;
+
   @include breakpoint(tablet-and-up) {
     font-size: 64px;
   }
@@ -43,6 +46,7 @@ body {
   letter-spacing: -1px;
   font-size: 32px;
   line-height: 1.125em;
+
   @include breakpoint(tablet-and-up) {
     font-size: 42px;
   }
@@ -56,6 +60,7 @@ body {
   font-size: 24px;
   line-height: 1.5em;
   font-weight: 200;
+
   @include breakpoint(tablet-and-up) {
     font-size: 30px;
   }
@@ -76,6 +81,7 @@ a {
 
 .mo-smalltext {
   font-size: 14px;
+
   @include breakpoint(tablet-and-up) {
     font-size: 16px;
   }

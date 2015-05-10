@@ -3,5 +3,15 @@
 
   &__buttons {
     text-align: center;
+
+    .ja-button {
+      width: 49%;
+      display: block;
+      float: left;
+
+      &:first-child {
+        margin-right: 2%;
+      }
+    }
   }
 }
