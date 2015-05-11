@@ -6,17 +6,16 @@ html {
   padding: 0;
 }
 
+body {
+  height: 100%;
+  background: $color-lightwhite;
+}
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
 
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background: $color-lightwhite;
-}
 
 .ja-bg {
   background-image: url("../images/jalo_splash_bg.jpg");

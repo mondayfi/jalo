@@ -19,7 +19,7 @@
 // Styleguide 2.1
 
 .ja-button {
-  padding: 8px 16px;
+  padding: 8px 18px;
   display: inline-block;
   border-radius: 3px;
   text-decoration: none;
@@ -38,6 +38,7 @@
   &--white {
     @include btn-theme--invert($color-white, $color-black);
   }
+
   &--fullwidth {
     display: block;
     width: 100%;
