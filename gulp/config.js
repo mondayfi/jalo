@@ -23,10 +23,6 @@ module.exports = {
     dest: dest + "/images"
   },
   styleguide: {
-    src: src + "/images/**",
-    srcImport: src + "/scss/import.scss",
-    distCSS: dest + 'css/main.css',
-    dest: dest + "/images",
     tmp: tmp + '/styleguide',
     config: {
       title: 'Jalo Pattern library',
