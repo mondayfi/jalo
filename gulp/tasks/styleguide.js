@@ -1,5 +1,6 @@
 var gulp        = require('gulp');
 var styleguide  = require('sc5-styleguide');
+var sass        = require('gulp-sass');
 var config      = require('../config');
 
 gulp.task('styleguide:generate', function() {
@@ -11,7 +12,7 @@ gulp.task('styleguide:generate', function() {
 
 gulp.task('styleguide:applystyles', function() {
   return gulp
-    gulp.src(config.sass.dest + 'main.css')
+    .src(config.sass.dest + 'main.css')
     .pipe(sass(config.sass.settings))
     .pipe(styleguide.applyStyles())
     .pipe(gulp.dest(config.styleguide.tmp));
