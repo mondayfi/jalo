@@ -36,7 +36,9 @@
     "lodash": "~3.8.0",
     "gulp-changed": "~1.2.1",
     "gulp-imagemin": "~2.2.1",
-    "gulp-autoprefixer": "~2.2.0"
+    "gulp-autoprefixer": "~2.2.0",
+    "gulp-iconfont": "~1.0.0",
+    "gulp-swig": "~0.7.4"
   },
   "dependencies": {
     "browserify": "^10.1.0",
