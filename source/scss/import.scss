@@ -1,9 +1,6 @@
-/* Vendor */
-
 /* Definitions  */
 @import "_variables.scss";
 @import "_mixins.scss";
-@import "_grid.scss";
 @import "_zindex.scss";
 @import "_type.scss";
 @import "_atoms.scss";
@@ -12,7 +9,8 @@
 @import "global.scss";
 @import "helper-classes.scss";
 
-/* Pages */
+/* Modules */
+@import "ja-grid.scss";
 @import "ja-splash.scss";
 @import "ja-input.scss";
 @import "ja-topnav.scss";
