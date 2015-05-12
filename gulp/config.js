@@ -62,17 +62,11 @@ module.exports = {
     bundleConfigs: [{
       entries: src + '/js/main.js',
       dest: dest + '/js',
-      outputName: 'global.js',
+      outputName: 'bundle.js',
       // Additional file extentions to make optional
       extensions: [''],
       // list of modules to make require-able externally
       require: []
-    }, {
-      entries: src + '/js/main.js',
-      dest: dest + '/js',
-      outputName:  'main.js',
-      // list of externally available modules to exclude from the bundle
-      external: ['jquery', 'underscore']
     }]
   },
   production: {
