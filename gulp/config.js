@@ -7,7 +7,8 @@ module.exports = {
     server: {
       baseDir: dest,
       port: 8080
-    }
+    },
+    open: false
   },
   sass: {
     srcImport: src + "/scss/import.scss",
