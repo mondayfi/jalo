@@ -1,0 +1,14 @@
+input {
+  &:focus {
+    outline:none;
+  }
+  &:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px white inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: #333;
+
+    &:focus {
+      -webkit-box-shadow: rgba(255,255,255,0.8),0 0 0 50px white inset;
+      -webkit-text-fill-color: #333;
+    }
+  }
+}

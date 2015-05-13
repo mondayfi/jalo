@@ -1,0 +1,12 @@
+@mixin input($btn-color, $btn-text-color: #fff) {
+  background-color: $btn-color;
+  color: $btn-text-color;
+
+  &:hover {
+    background-color: darken($btn-color, 10%);
+  }
+
+  &:active {
+    background-color: darken($btn-color, 5%);
+  }
+}

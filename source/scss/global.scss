@@ -15,7 +15,9 @@ body {
   box-sizing: inherit;
 }
 
-
+.ja-bodytopnav {
+  padding-top: $topnav-height;
+}
 
 .ja-bg {
   background-image: url("../images/jalo_splash_bg.jpg");

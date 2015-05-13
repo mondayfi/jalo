@@ -1,21 +1,25 @@
 .ja-topnav {
   background: $color-white;
   border-bottom: 1px solid #e7e7e7;
-  height: 45px;
+  height: $topnav-height;
   z-index: $zindex1;
   color: $color-black;
-  opacity: 0.3;
-}
+  position: relative;
 
-.ja-hamburger {
-  border: 0;
-  background: none;
-  height: 45px;
-  width: 45px;
-  float: left;
-  cursor: pointer;
-  svg {
-    stroke: $color-black;
+  &__title {
+    line-height: $topnav-height;
+  }
+  &__backbtn {
+    border: 0;
+    background: none;
+    height: $topnav-height;
+    width: $topnav-height;
+    position: absolute;
+    line-height: $topnav-height;
+    text-align: center;
+    top: 0;
+    left: 0;
+    cursor: pointer;
   }
 }
 

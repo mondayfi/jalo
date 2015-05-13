@@ -13,11 +13,13 @@
   &:before
     -moz-osx-font-smoothing: grayscale
     -webkit-font-smoothing: antialiased
+    transform: translate(0, 0)
     content: $content
     font-family: 'jalo-icons'
     font-style: normal
     font-variant: normal
     font-weight: normal
+    font-size: inherit
     line-height: 1
     speak: none
     text-transform: none
@@ -28,31 +30,63 @@
     @content
 
 .icon
-  &.-facebook
+  &--facebook
     +icon--facebook
 
-=icon--linkedin
+=icon--twitter
   +icon("\e002")
     @content
 
 .icon
-  &.-linkedin
-    +icon--linkedin
+  &--twitter
+    +icon--twitter
 
-=icon--pinterest
+=icon--linkedin
   +icon("\e003")
     @content
 
 .icon
-  &.-pinterest
-    +icon--pinterest
+  &--linkedin
+    +icon--linkedin
 
-=icon--twitter
+=icon--pinterest
   +icon("\e004")
     @content
 
 .icon
-  &.-twitter
-    +icon--twitter
+  &--pinterest
+    +icon--pinterest
+
+=icon--arrow-left
+  +icon("\e005")
+    @content
+
+.icon
+  &--arrow-left
+    +icon--arrow-left
+
+=icon--arrow-right
+  +icon("\e006")
+    @content
+
+.icon
+  &--arrow-right
+    +icon--arrow-right
+
+=icon--arrow-up
+  +icon("\e007")
+    @content
+
+.icon
+  &--arrow-up
+    +icon--arrow-up
+
+=icon--arrow-down
+  +icon("\e008")
+    @content
+
+.icon
+  &--arrow-down
+    +icon--arrow-down
 
 
