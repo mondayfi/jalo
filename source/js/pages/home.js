@@ -3,6 +3,6 @@ var home = require('../templates/home.handlebars');
 
 
 module.exports = PageView.extend({
-    pageTitle: 'home',
+    pageTitle: 'Jalo',
     template: home
 });
