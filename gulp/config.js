@@ -51,14 +51,55 @@ module.exports = {
     src: src + '/icons/*.svg',
     dest: dest + '/fonts',
     sassDest: src + '/scss',
-    template: './gulp/tasks/iconFont/template.scss.swig',
+    template: './gulp/tasks/iconFont/template.sass.swig',
     sassOutputName: '_icons.sass',
-    fontPath: 'fonts',
+    fontPath: '../fonts',
     className: 'ja-icon',
     options: {
       fontName: 'jalo-icons',
       appendCodepoints: true,
       normalize: false
+    }
+  },
+  favicons: {
+    src: dest + '/index.html',
+    dest: dest,
+    config: {
+      files: {
+        src: src + '/images/favicons/favicon.png',
+          // src: {
+          //   "android": src + '/images/favicons/android.png',
+          //   "appleIcon": src + '/images/favicons/appleIcon.png',
+          //   "appleStartup": src + '/images/favicons/appleStartup.png',
+          //   "coast": src + '/images/favicons/favicon-coast.png',
+          //   "favicons": src + '/images/favicons/favicon.png',
+          //   "firefox": src + '/images/favicons/favicon.png',
+          //   "opengraph": src + '/images/favicons/favicon.png',
+          //   "windows": src + '/images/favicons/favicon.png',
+          //   "yandex": src + '/images/favicons/favicon.png'
+          // },
+          // Doesn't fucking work. Pyry please fix!!!!! // Samuel
+          dest: '/images/favicons',
+          html: src + '/index.html',
+          iconsPath: '/images/favicons'
+      },
+      icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          coast: false, // Pyry, can these be removed?
+          favicons: true,
+          firefox: false,
+          opengraph: false,
+          windows: false,
+          yandex: false
+      },
+      settings: {
+          background: null,
+          silhouette: false,
+          logging: true,
+          index: ''
+      }
     }
   },
   browserify: {

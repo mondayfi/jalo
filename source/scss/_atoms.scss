@@ -19,9 +19,8 @@
 // Styleguide 2.1
 
 .ja-button {
-  padding: 8px 18px;
+  padding: 20px 18px;
   display: inline-block;
-  border-radius: 3px;
   text-decoration: none;
   text-align: center;
   @include font-title;
@@ -37,6 +36,11 @@
 
   &--white {
     @include btn-theme--invert($color-white, $color-black);
+  }
+
+  &--grey {
+    @include btn-theme--border($color-white, #D6D5D4 , #D6D5D4);
+    cursor: default;
   }
 
   &--fullwidth {

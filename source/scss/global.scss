@@ -1,6 +1,7 @@
 html {
   position: relative;
   height: 100%;
+  font-size: 10px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -9,13 +10,19 @@ html {
 body {
   height: 100%;
   background: $color-lightwhite;
+
+  &.ja__white {
+    background: $color-white;
+  }
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-
+.ja-bodytopnav {
+  padding-top: $topnav-height;
+}
 
 .ja-bg {
   background-image: url("../images/jalo_splash_bg.jpg");

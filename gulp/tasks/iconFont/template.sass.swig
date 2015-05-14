@@ -11,11 +11,13 @@
   &:before
     -moz-osx-font-smoothing: grayscale
     -webkit-font-smoothing: antialiased
+    transform: translate(0, 0)
     content: $content
     font-family: '{{fontName}}'
     font-style: normal
     font-variant: normal
     font-weight: normal
+    font-size: inherit
     line-height: 1
     speak: none
     text-transform: none
@@ -27,7 +29,7 @@
     @content
 
 .icon
-  &.-{{icon.name}}
+  &--{{icon.name}}
     +icon--{{icon.name}}
 
 {% endfor %}

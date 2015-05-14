@@ -1,7 +1,10 @@
 /* Definitions  */
+@import "_reset.scss";
 @import "_icons.sass";
 @import "_variables.scss";
+@import "_variables-colors.scss";
 @import "_mixins.scss";
+@import "_mixins-form.scss";
 @import "_zindex.scss";
 @import "_type.scss";
 @import "_atoms.scss";
@@ -15,3 +18,8 @@
 @import "ja-splash.scss";
 @import "ja-input.scss";
 @import "ja-topnav.scss";
+@import "ja-select.scss";
+@import "ja-question.scss";
+@import "ja_multipleselect.scss";
+@import "ja-formarea.scss";
+@import "ja-modal.scss";

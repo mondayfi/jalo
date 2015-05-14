@@ -1,0 +1,48 @@
+.ja-question {
+  padding: 3rem 0 0 0;
+
+  &__header {
+    margin: 0 0 2rem 0;
+    display: block;
+  }
+  &__button {
+    margin: 0 auto;
+    display: block;
+    width: 70%;
+  }
+}
+
+
+
+.ja_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    @include font-title;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: -1px;
+    font-size: 2rem;
+    padding: 15px 15px;
+    display: block;
+    border-bottom: 1px solid $color-grey;
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+    span {
+      color: $color-purple;
+      font-weight: 600;
+    }
+    &:hover {
+      background: $color-lightwhite;
+    }
+  }
+}
+
+.ja-answerlist__header {
+  margin: 0 0 1rem 0;
+}
