@@ -6,16 +6,17 @@
    See browserify.bundleConfigs in gulp/config.js
 */
 
-var browserify   = require('browserify');
-var browserSync  = require('browser-sync');
-var watchify     = require('watchify');
-var mergeStream  = require('merge-stream');
-var bundleLogger = require('../util/bundleLogger');
-var gulp         = require('gulp');
-var handleErrors = require('../util/handleErrors');
-var source       = require('vinyl-source-stream');
-var config       = require('../config').browserify;
-var _            = require('lodash');
+var browserifyHandlebars  = require('browserify-handlebars');
+var browserify            = require('browserify');
+var browserSync           = require('browser-sync');
+var watchify              = require('watchify');
+var mergeStream           = require('merge-stream');
+var bundleLogger          = require('../util/bundleLogger');
+var gulp                  = require('gulp');
+var handleErrors          = require('../util/handleErrors');
+var source                = require('vinyl-source-stream');
+var config                = require('../config').browserify;
+var _                     = require('lodash');
 
 var browserifyTask = function(devMode) {
 
@@ -37,6 +38,7 @@ var browserifyTask = function(devMode) {
       bundleLogger.start(bundleConfig.outputName);
 
       return b
+        .transform(browserifyHandlebars)
         .bundle()
         // Report compile errors
         .on('error', handleErrors)
