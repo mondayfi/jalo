@@ -31,7 +31,7 @@ module.exports = View.extend({
         this.renderWithTemplate(this);
 
         // init and configure our page switcher
-        this.pageSwitcher = new ViewSwitcher(this.queryByHook('page-container'), {
+        this.pageSwitcher = new ViewSwitcher(this.queryByHook('js-app-container'), {
             show: function (newView, oldView) {
                 // it's inserted and rendered for me
                 document.title = _.result(newView, 'pageTitle') || 'test';
