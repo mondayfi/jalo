@@ -1,0 +1,9 @@
+.ja-modal {
+  height: 620px;
+  &__content {
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding: 90px 18px 50px;
+    position: relative;
+  }
+}
