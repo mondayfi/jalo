@@ -28,14 +28,11 @@ module.exports = View.extend({
         document.head.appendChild(domify(headTmpl()));
 
         // main renderer
-        console.log(this.el)
         this.renderWithTemplate(this);
 
         // init and configure our page switcher
         this.pageSwitcher = new ViewSwitcher(this.queryByHook('page-container'), {
             show: function (newView, oldView) {
-            	console.log(newView)
-            	console.log(oldView)
                 // it's inserted and rendered for me
                 document.title = _.result(newView, 'pageTitle') || 'test';
                 document.scrollTop = 0;
@@ -55,7 +52,6 @@ module.exports = View.extend({
 
     handleNewPage: function (view) {
         // tell the view switcher to render the new one
-        console.log(view);
         this.pageSwitcher.set(view);
 
         // mark the correct nav item selected
