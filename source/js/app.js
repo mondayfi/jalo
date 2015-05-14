@@ -1,4 +1,5 @@
 var app = require('ampersand-app');
+var dom = require('ampersand-dom');
 var _ = require('lodash');
 var Router = require('./router');
 var MainView = require('./views/main');
