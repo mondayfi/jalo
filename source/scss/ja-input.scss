@@ -1,3 +1,16 @@
+// Inputs
+//
+// Atoms are the most basic buildingblocks
+//
+// .ja-button--purple - purple color
+// .ja-button--green - green color
+// .ja-button--black - black color
+// Default - No color
+//
+// markup:
+// <div class="ja-button {$modifiers}">button</div>
+//
+// Styleguide 2.2
 .ja_input {
   position: relative;
   @include font-title;
@@ -14,7 +27,6 @@
     font-size: 100%;
     margin: 0 0 2rem 0;
     padding: 0 0 0 0.75rem;
-    box-shadow: none;
 
     &:focus {
       background-color: rgba(255,255,255, 0.5);

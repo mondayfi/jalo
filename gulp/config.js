@@ -7,11 +7,12 @@ module.exports = {
     server: {
       baseDir: dest,
       port: 8080
-    }
+    },
+    open: false
   },
   sass: {
     srcImport: src + "/scss/import.scss",
-    src: src + "/scss/**/*.{css,scss}",
+    src: src + "/scss/**/*.{css,scss,sass}",
     dest: dest + "/css",
     settings: {
       indentedSyntax: true, // Enable .scss syntax!
@@ -33,6 +34,10 @@ module.exports = {
       port: 4000
     }
   },
+  vendorstyles: {
+    src: './node_modules/normalize.css/normalize.css',
+    dest: dest + '/css'
+  },
   markup: {
     src: src + "/htdocs/**",
     dest: dest
@@ -42,16 +47,16 @@ module.exports = {
     dest: dest
   },
   iconFonts: {
-    name: 'Gulp Starter Icons',
+    name: 'Jalo Icons',
     src: src + '/icons/*.svg',
     dest: dest + '/fonts',
     sassDest: src + '/scss',
     template: './gulp/tasks/iconFont/template.scss.swig',
-    sassOutputName: '_icons.scss',
+    sassOutputName: '_icons.sass',
     fontPath: 'fonts',
-    className: 'icon',
+    className: 'ja-icon',
     options: {
-      fontName: 'Post-Creator-Icons',
+      fontName: 'jalo-icons',
       appendCodepoints: true,
       normalize: false
     }
