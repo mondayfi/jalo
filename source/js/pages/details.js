@@ -1,5 +1,5 @@
 var PageView = require('./base');
-var details = require('../templates/details.handlebars');
+var details = require('../templates/details.hbs');
 
 
 module.exports = PageView.extend({
