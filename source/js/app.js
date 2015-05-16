@@ -22,7 +22,7 @@ app.extend({
         // Create and attach our main view
         this.mainView = new MainView({
             model: this.me,
-            el: document.getElementById("ampersand-app")
+            el: document.body
         });
 
         // this kicks off our backbutton tracking (browser history)

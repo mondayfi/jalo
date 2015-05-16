@@ -8,9 +8,8 @@ var ViewSwitcher = require('ampersand-view-switcher');
 var _ = require('lodash');
 var domify = require('domify');
 var localLinks = require('local-links');
-var bodyTmpl = require('../templates/includes/body.handlebars');
-var headTmpl = require('../templates/includes/head.handlebars');
-
+var bodyTmpl = require('../templates/includes/body.hbs');
+var headTmpl = require('../templates/includes/head.hbs');
 
 
 module.exports = View.extend({
@@ -25,7 +24,7 @@ module.exports = View.extend({
     },
     render: function () {
         // some additional stuff we want to add to the document head
-        document.head.appendChild(domify(headTmpl()));
+        // document.head.appendChild(domify(headTmpl()));
 
         // main renderer
         this.renderWithTemplate(this);

@@ -5,8 +5,9 @@
    different sources, and to use Watchify when run from the default task.
    See browserify.bundleConfigs in gulp/config.js
 */
-
-var browserifyHandlebars  = require('browserify-handlebars');
+var hbsfy = require("hbsfy").configure({
+  extensions: ["hbs"]
+});
 var browserify            = require('browserify');
 var browserSync           = require('browser-sync');
 var watchify              = require('watchify');
@@ -38,7 +39,7 @@ var browserifyTask = function(devMode) {
       bundleLogger.start(bundleConfig.outputName);
 
       return b
-        .transform(browserifyHandlebars)
+        .transform(hbsfy)
         .bundle()
         // Report compile errors
         .on('error', handleErrors)
@@ -56,6 +57,7 @@ var browserifyTask = function(devMode) {
     if(devMode) {
       // Wrap with watchify and rebundle on changes
       b = watchify(b);
+
       // Rebundle on update
       b.on('update', bundle);
       bundleLogger.watch(bundleConfig.outputName);
