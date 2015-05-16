@@ -22,13 +22,14 @@ app.extend({
         // Create and attach our main view
         this.mainView = new MainView({
             model: this.me,
-            el: document.body
+            el: document.getElementById("ampersand-app")
         });
 
         // this kicks off our backbutton tracking (browser history)
         // and will cause the first matching handler in the router
         // to fire.
         this.router.history.start({ pushState: true });
+        // this.router.reload();
     },
     // This is a helper for navigating around the app.
     // this gets called by a global click handler that handles
