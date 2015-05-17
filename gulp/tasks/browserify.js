@@ -5,9 +5,6 @@
    different sources, and to use Watchify when run from the default task.
    See browserify.bundleConfigs in gulp/config.js
 */
-var hbsfy = require("hbsfy").configure({
-  extensions: ["hbs"]
-});
 var browserify            = require('browserify');
 var browserSync           = require('browser-sync');
 var watchify              = require('watchify');
@@ -18,6 +15,9 @@ var handleErrors          = require('../util/handleErrors');
 var source                = require('vinyl-source-stream');
 var config                = require('../config').browserify;
 var _                     = require('lodash');
+var hbsfy = require("hbsfy").configure({
+  extensions: config.templates.extensions
+});
 
 var browserifyTask = function(devMode) {
 

@@ -103,6 +103,9 @@ module.exports = {
     }
   },
   browserify: {
+    templates: {
+      extensions: ['hbs'],
+    },
     // A separate bundle will be generated for each
     // bundle config in the list below
     bundleConfigs: [{
@@ -110,7 +113,7 @@ module.exports = {
       dest: dest + '/js',
       outputName: 'bundle.js',
       // Additional file extentions to make optional
-      extensions: [''],
+      extensions: ['hbs'],
       // list of modules to make require-able externally
       require: []
     }]
