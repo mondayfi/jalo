@@ -15,22 +15,26 @@
 .ja_input {
   position: relative;
   @include font-title;
-  margin: 0 0 2rem 0;
+  margin: 0 0 ($element-margin*1.5) 0;
+
+  &--nomargin {
+    margin-bottom: $element-margin;
+  }
 
   &__input {
-    background-color: rgba(255,255,255, 0.3);
+    background-color: rgba(255,255,255, 0.5);
     border: none;
     border-radius: 0;
     outline: none;
     height: 5rem;
     width: 100%;
-    font-size: 2.4rem;
+    @extend %ja-h3;
     margin: 0;
     padding: 0 10px;
     border-bottom: 1px solid $color-white;
 
     &:focus {
-      background-color: rgba(255,255,255, 0.5);
+      background-color: rgba(255,255,255, 0.8);
     }
   }
 
@@ -39,17 +43,17 @@
     pointer-events:none;
     color: $color-black;
     position: absolute;
-    top: 1.5rem;
+    top: 1rem;
     left: 1rem;
-    font-size: 2.4rem;
+    @extend %ja-h3;
     cursor: text;
 
     .ja_input__input:valid ~ &,
     .ja_input__input:focus ~ & {
       color: $color-white;
-      font-size: 0.85rem;
+      @include font-size(14);
       left: 0;
-      transform: translateY(-195%);
+      transform: translateY(-170%);
     }
   }
 
@@ -63,7 +67,7 @@
     opacity: 0.5;
 
     .ja_input__input:focus ~ & {
-      animation: inputHighlighter 0.3s ease;
+      @include animation('inputHighlighter 0.3s ease');
     }
   }
 
@@ -97,15 +101,5 @@
         width: 50%;
       }
     }
-  }
-}
-
-@keyframes inputHighlighter {
-  from {
-    background: $color-white;
-  }
-  to  {
-    width:0;
-    background: transparent;
   }
 }

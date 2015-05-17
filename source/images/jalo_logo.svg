@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="506px" height="157px" viewBox="0 0 506 157" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>jalo_logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="jalo_logo" sketch:type="MSArtboardGroup" fill="#FFFFFF">
+            <g id="fa-paper-plane-o" sketch:type="MSLayerGroup" transform="translate(0.000000, 5.000000)">
+                <path d="M3.47617391,80.3864348 L38.5168696,94.7196522 L38.5168696,128.169739 C38.5168696,129.228174 38.7829565,130.026435 39.3092174,130.954783 C39.8413913,131.753043 40.6396522,132.279304 41.568,132.681391 C41.9641739,132.811478 42.4963478,132.947478 43.1586087,132.947478 C44.6191304,132.947478 45.8135652,132.415304 46.741913,131.350957 L68.773913,107.196174 L107.794087,123.125913 C108.462261,123.256 108.988522,123.392 109.520696,123.392 C110.449043,123.392 111.247304,123.256 111.909565,122.859826 C113.24,122.061565 114.032348,121.00313 114.298435,119.542609 L133.149217,5.79930435 C133.545391,3.8066087 132.88313,2.216 131.156522,1.02156522 C129.56,-0.172869565 127.839304,-0.172869565 126.112696,0.885565217 L2.944,72.0253913 C1.22330435,72.9537391 0.425043478,74.4142609 0.555130435,76.4069565 C0.691130435,78.3996522 1.74956522,79.7241739 3.47617391,80.3864348 L3.47617391,80.3864348 Z M122.263304,14.0243478 L105.937391,111.973913 L69.442087,97.1085217 L104.878957,38.1791304 L40.9057391,85.4302609 L16.0827826,75.3426087 L122.263304,14.0243478 L122.263304,14.0243478 Z" id="Fill-28" sketch:type="MSShapeGroup"></path>
+            </g>
+            <text sketch:type="MSTextLayer" font-family="Maven Pro" font-size="210" font-weight="normal" sketch:alignment="middle" line-spacing="242" letter-spacing="-10">
+                <tspan x="160.060059" y="149.5">Jal</tspan>
+                <tspan x="382.921387" y="149.5">o</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

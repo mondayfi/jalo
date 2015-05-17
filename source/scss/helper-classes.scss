@@ -1,13 +1,18 @@
-.ja-textaligncenter {
+.ja-text-aligncenter {
   text-align: center;
 }
 
-.ja-textitalic {
+.ja-text-italic {
   font-style: italic;
 }
 
-.ja-textcolor {
+.ja-text-color,
+%ja-text-color {
   &--white {
     color: $color-white;
   }
+}
+
+.ja-text-uppercase {
+  text-transform: uppercase;
 }

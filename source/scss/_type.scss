@@ -4,31 +4,47 @@
 //
 // Styleguide 1.0
 
+// Headings
+//
+// Headings don't get any styles by default. This is because markup and styles usually don't compute. Heading styles are .ja-hX. If you want to use these styles in your css you should extend them instead of including them. This will create smaller compiled css. You do this with the command @extend %ja-hX.
+//
+// Markup:
+// <h1 class="ja-h1">Heading 1</h1>
+// <h2 class="ja-h2">Heading 2</h2>
+// <h3 class="ja-h3">Heading 3</h3>
+// <h4 class="ja-h4">Heading 4</h4>
+// <h5 class="ja-h5">Heading 5</h5>
+// <h6 class="ja-h6">Heading 6</h6>
+//
+// Styleguide 1.1
+
+// Body
+//
+// Use
+//
+// Markup:
+// <h1 class="ja-h1">Heading 1</h1>
+// <h2 class="ja-h2">Heading 2</h2>
+// <h3 class="ja-h3">Heading 3</h3>
+// <h4 class="ja-h4">Heading 4</h4>
+// <h5 class="ja-h5">Heading 5</h5>
+// <h6 class="ja-h6">Heading 6</h6>
+//
+// Styleguide 1.2
+
 body {
   @include font-body;
   color: $color-black;
-  font-size: 1.3125em;
+  font-size: 62.5%; /* Sets up the Base 10 stuff */
   line-height: 1.5em;
   font-weight: 300;
-}
-
-.ja-supersizetitle,
-%ja-supersizetitle {
-  @include font-title;
-  font-weight: 200;
-  margin: 0;
-  letter-spacing: -1px;
-  font-size: 9rem;
-  line-height: 1.125em;
-  margin-bottom: 2rem;
 }
 
 .ja-h1,
 %ja-h1 {
   @include font-title;
-  margin: 0;
   letter-spacing: -1px;
-  font-size: 3.2rem;
+  @include font-size(32);
   line-height: 1.125em;
 }
 
@@ -37,7 +53,7 @@ body {
   @include font-title;
   letter-spacing: -1px;
   font-weight: 200;
-  font-size: 2.6rem;
+  @include font-size(26);
   line-height: 1.125em;
   margin: 0;
 }
@@ -49,29 +65,24 @@ body {
 %ja-h3 {
   @include font-title;
   margin: 0;
-  font-size: 2.3rem;
+  @include font-size(23);
   line-height: 1.5em;
   font-weight: 300;
 }
 .ja-h4,
 %ja-h4 {
-  font-size: 1.8rem;
+  @include font-size(18);
 }
 
 .ja-h4,
 %ja-h4 {
-  font-size: 1.4rem;
-}
-
-.ja-uppercase {
-  text-transform: uppercase;
+  @include font-size(14);
 }
 
 p {
-  font-weight: 400;
-  font-size: 1.4rem;
-  line-height: 143%;
-  margin: 0 0 20px;
+  @include font-size(16);
+  line-height: 150%;
+  margin: 0 0 15px;
 }
 
 strong {
@@ -83,10 +94,12 @@ a {
   color: inherit;
 }
 
-.mo-smalltext {
-  font-size: 14px;
-
-  @include breakpoint(tablet-and-up) {
-    font-size: 16px;
-  }
+/*
+Custom type styles
+*/
+.ja-eyebrow-note {
+  @include font-size(12);
+  color: $color-white-light;
+  margin: 0;
+  text-transform: capitalize;
 }

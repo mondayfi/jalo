@@ -1,0 +1,4 @@
+@include keyframes(inputHighlighter) {
+  from {  background: $color-white; }
+  to   {  width: 0; background: transparent;}
+}

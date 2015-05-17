@@ -1,12 +1,23 @@
 .ja-select {
   width: 100%;
-  background: $color-lightwhite;
+  background: $color-white-light;
   position: relative;
+
+  &:after {
+    position: absolute;
+    content: "\e008";
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: $color-black;
+    right: 5px;
+    font-family: 'jalo-icons';
+  }
+
   &__select {
     width: 100%;
     border-left: 0;
     border-right: 0;
-
     border-top: 2px solid $color-purple;
     border-bottom: 2px solid $color-white;
     padding: 6px 25px 6px 10px;
@@ -18,16 +29,6 @@
     background: transparent;
     background-clip: padding-box;
     text-overflow: '';
-  }
-  &:after {
-    position: absolute;
-    content: "\e008";
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    color: $color-black;
-    right: 5px;
-    font-family: 'jalo-icons';
   }
 }
 
