@@ -113,7 +113,7 @@ module.exports = {
       dest: dest + '/js',
       outputName: 'bundle.js',
       // Additional file extentions to make optional
-      extensions: ['hbs'],
+      extensions: ['.hbs'],
       // list of modules to make require-able externally
       require: []
     }]
