@@ -88,9 +88,17 @@
       color: $color-black;
     }
   }
+  &--purple {
+    background: $color-purple;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $zindex1;
+  }
 }
 
-.expand-nav {
+.ja-expand-nav {
   background-position: center 18px;
   background-size: 26px;
   background-repeat: no-repeat;
@@ -100,4 +108,9 @@
   padding: 0 18px;
   text-indent: -9999px;
   width: 64px;
+
+  .ja-topnav--purple & {
+    border-bottom: 1px solid $color-purple;
+    background-color: $color-purple;
+  }
 }
