@@ -1,7 +1,6 @@
 /* Definitions  */
 @import "_reset.scss";
 @import "_icons.sass";
-@import "_icons-inline.scss";
 @import "_variables.scss";
 @import "_variables-colors.scss";
 @import "_mixins.scss";
@@ -17,9 +16,11 @@
 @import "animations.scss";
 
 /* Modules */
+@import "modules/ja-answerlist.scss";
 @import "modules/ja-formarea.scss";
 @import "modules/ja-grid.scss";
 @import "modules/ja-input.scss";
+@import "modules/ja-list.scss";
 @import "modules/ja-modal.scss";
 @import "modules/ja-multipleselect.scss";
 @import "modules/ja-nav.scss";

@@ -1,6 +1,6 @@
 .ja_multipleselect {
   border: 1px solid $color-black-light;
-  box-shadow: $color-athensgrey 0 0 0 3px inset,$color-grey 2px 3px 0;
+  box-shadow: $color-athensgrey 0 0 0 3px inset;
   display: table;
   height: 100%;
   padding: 10px 10px 18px;
@@ -30,7 +30,9 @@
       top: 0;
     }
   }
+
   &--unselected {
+    border-color: $color-grey;
     .ja_multipleselect__name,
     .ja-eyebrow-note {
       color: $color-grey;

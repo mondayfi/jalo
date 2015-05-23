@@ -13,99 +13,93 @@
 // Styleguide 2.2
 
 .ja_input {
-  position: relative;
-  @include font-title;
-  margin: 0 0 2rem 0;
+	position: relative;
+	@include font-title;
+	margin: 0 0 ($element-margin*1.5) 0;
 
-  &__input {
-    background-color: rgba(255,255,255, 0.3);
-    border: none;
-    border-radius: 0;
-    outline: none;
-    height: 5rem;
-    width: 100%;
-    font-size: 2.4rem;
-    margin: 0;
-    padding: 0 10px;
-    border-bottom: 1px solid $color-white;
+	&--nomargin {
+		margin-bottom: $element-margin;
+	}
 
-    &:focus {
-      background-color: rgba(255,255,255, 0.5);
-    }
-  }
+	&__input {
+		background-color: rgba(255,255,255, 0.5);
+		border: none;
+		border-radius: 0;
+		outline: none;
+		height: 5rem;
+		width: 100%;
+		@extend %ja-h3;
+		margin: 0;
+		padding: 0 10px;
+		border-bottom: 1px solid $color-white;
 
-  &__label {
-    @include transition-all;
-    pointer-events:none;
-    color: $color-black;
-    position: absolute;
-    top: 1.5rem;
-    left: 1rem;
-    font-size: 2.4rem;
-    cursor: text;
+		&:focus {
+			background-color: rgba(255,255,255, 0.8);
+		}
+	}
 
-    .ja_input__input:valid ~ &,
-    .ja_input__input:focus ~ & {
-      color: $color-white;
-      font-size: 0.85rem;
-      left: 0;
-      transform: translateY(-195%);
-    }
-  }
+	&__label {
+		@include transition-all;
+		pointer-events:none;
+		color: $color-black;
+		position: absolute;
+		top: 1rem;
+		left: 1rem;
+		@extend %ja-h3;
+		cursor: text;
 
-  &__highlight {
-    position: absolute;
-    height: 60%;
-    width: 100%;
-    top: 0%;
-    left: 0;
-    pointer-events: none;
-    opacity: 0.5;
+		.ja_input__input:valid ~ &,
+		.ja_input__input:focus ~ & {
+			color: $color-white;
+			@include font-size(14);
+			left: 0;
+			transform: translateY(-170%);
+		}
+	}
 
-    .ja_input__input:focus ~ & {
-      animation: inputHighlighter 0.3s ease;
-    }
-  }
+	&__highlight {
+		position: absolute;
+		height: 60%;
+		width: 100%;
+		top: 0%;
+		left: 0;
+		pointer-events: none;
+		opacity: 0.5;
 
-  &__bar {
-    position: relative;
-    display: block;
-    width: 100%;
+		.ja_input__input:focus ~ & {
+			@include animation('inputHighlighter 0.3s ease');
+		}
+	}
 
-    &:before,
-    &:after {
-      @include transition-all;
-      content: '';
-      height: 2px;
-      width: 0;
-      bottom: 1px;
-      position: absolute;
-      background: $color-white;
-    }
+	&__bar {
+		position: relative;
+		display: block;
+		width: 100%;
 
-    &:before {
-      left: 50%;
-    }
+		&:before,
+		&:after {
+			@include transition-all;
+			content: '';
+			height: 2px;
+			width: 0;
+			bottom: 1px;
+			position: absolute;
+			background: $color-white;
+		}
 
-    &:after {
-      right: 50%;
-    }
+		&:before {
+			left: 50%;
+		}
 
-    .ja_input__input:focus ~ & {
-      &:after,
-      &:before {
-        width: 50%;
-      }
-    }
-  }
-}
+		&:after {
+			right: 50%;
+		}
 
-@keyframes inputHighlighter {
-  from {
-    background: $color-white;
-  }
-  to  {
-    width:0;
-    background: transparent;
-  }
+		.ja_input__input:focus ~ & {
+			&:after,
+			&:before {
+				width: 50%;
+			}
+		}
+	}
 }

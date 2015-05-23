@@ -7,7 +7,7 @@
   font-weight: normal
   font-style: normal
 
-=icon($content)
+=ja-icon($content)
   &:before
     -moz-osx-font-smoothing: grayscale
     -webkit-font-smoothing: antialiased
@@ -18,18 +18,17 @@
     font-variant: normal
     font-weight: normal
     font-size: inherit
-    line-height: 1
     speak: none
     text-transform: none
     @content
 
 {% for icon in icons -%}
-=icon--{{icon.name}}
-  +icon("\{{icon.code}}")
+=ja-icon--{{icon.name}}
+  +ja-icon("\{{icon.code}}")
     @content
 
-.icon
+.ja-icon
   &--{{icon.name}}
-    +icon--{{icon.name}}
+    +ja-icon--{{icon.name}}
 
 {% endfor %}

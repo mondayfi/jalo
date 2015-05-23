@@ -5,7 +5,7 @@
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="uE001-facebook" sketch:type="MSArtboardGroup" fill="#444444">
+        <g id="uE001-facebook" sketch:type="MSArtboardGroup" fill="#000000">
             <path d="M389.3375,56 L122.6625,56 C85.85,56 56,85.85 56,122.675 L56,389.325 C56,426.15 85.8375,456 122.6625,456 L256,456 L256,281 L206,281 L206,231 L256,231 L256,193.5 C256,158.9875 283.9875,131 318.5,131 L381,131 L381,181 L318.5,181 C311.6,181 306,186.6 306,193.5 L306,231 L374.75,231 L362.25,281 L306,281 L306,456 L389.3375,456 C426.15,456 456,426.15 456,389.325 L456,122.675 C456,85.85 426.1625,56 389.3375,56 L389.3375,56 Z" id="Shape" sketch:type="MSShapeGroup"></path>
         </g>
     </g>

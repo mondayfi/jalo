@@ -20,29 +20,22 @@
       @extend %ja-h4;
       font-size: 2rem;
     }
+
     &img {
       width: 40px;
       margin: 0 auto;
     }
   }
 
-  &__backbtn {
-    border: 0;
-    background: none;
-    height: $topnav-height;
-    width: $topnav-height;
-    position: absolute;
-    line-height: $topnav-height;
-    text-align: center;
-    top: 0;
-    left: 0;
-    cursor: pointer;
-  }
-
   &__item {
     border-left: 1px solid rgba(0,0,0,0.3);
     height: $topnav-height;
     float: left;
+    cursor: pointer;
+
+    &:hover {
+      background: #2D5491;
+    }
 
     &--noborder {
       border-left: 0;
@@ -52,13 +45,18 @@
   &__close {
     line-height: $topnav-height;
     width: $topnav-height;
-    height: $topnav-height;
-    background-repeat: no-repeat;
-    text-indent: -999px;
-    background-position: center center;
     display: block;
+    text-align: center;
+    height: 100%;
+    line-height: $topnav-height;
+    @include font-size(26);
+    color: $color-black;
 
+    &:hover {
+      color: white;
+    }
   }
+
   &__right {
     position: absolute;
     top: 0;
@@ -75,6 +73,25 @@
     }
   }
 
+  &__hamburger {
+    color: $color-white;
+    display: block;
+    text-align: center;
+    height: 100%;
+    line-height: $topnav-height;
+    @include font-size(26);
+    width: 64px;
+
+    .ja-topnav--purple & {
+      border-bottom: 1px solid $color-purple;
+      background-color: $color-purple;
+    }
+  }
+
+/*
+Modifiers
+*/
+
   &--white {
     background: $color-white;
     border-bottom: 1px solid $color-grey;
@@ -88,6 +105,7 @@
       color: $color-black;
     }
   }
+
   &--purple {
     background: $color-purple;
     border-bottom: 1px solid rgba(0,0,0,0.3);
@@ -95,22 +113,5 @@
     top: 0;
     left: 0;
     z-index: $zindex1;
-  }
-}
-
-.ja-expand-nav {
-  background-position: center 18px;
-  background-size: 26px;
-  background-repeat: no-repeat;
-  color: $color-white;
-  display: block;
-  line-height: 54px;
-  padding: 0 18px;
-  text-indent: -9999px;
-  width: 64px;
-
-  .ja-topnav--purple & {
-    border-bottom: 1px solid $color-purple;
-    background-color: $color-purple;
   }
 }

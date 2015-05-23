@@ -1,0 +1,29 @@
+.ja_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    @include font-title;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: -1px;
+    font-size: 2rem;
+    padding: 15px 10px;
+    display: block;
+    line-height: 1.1em;
+    border-bottom: 1px solid $color-grey;
+    text-transform: capitalize;
+
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+
+    &:hover {
+      background: $color-purple;
+      color: $color-white;
+    }
+  }
+}

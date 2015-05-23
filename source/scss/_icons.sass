@@ -9,7 +9,7 @@
   font-weight: normal
   font-style: normal
 
-=icon($content)
+=ja-icon($content)
   &:before
     -moz-osx-font-smoothing: grayscale
     -webkit-font-smoothing: antialiased
@@ -20,73 +20,88 @@
     font-variant: normal
     font-weight: normal
     font-size: inherit
-    line-height: 1
     speak: none
     text-transform: none
     @content
 
-=icon--facebook
-  +icon("\e001")
+=ja-icon--facebook
+  +ja-icon("\e001")
     @content
 
-.icon
+.ja-icon
   &--facebook
-    +icon--facebook
+    +ja-icon--facebook
 
-=icon--twitter
-  +icon("\e002")
+=ja-icon--twitter
+  +ja-icon("\e002")
     @content
 
-.icon
+.ja-icon
   &--twitter
-    +icon--twitter
+    +ja-icon--twitter
 
-=icon--linkedin
-  +icon("\e003")
+=ja-icon--linkedin
+  +ja-icon("\e003")
     @content
 
-.icon
+.ja-icon
   &--linkedin
-    +icon--linkedin
+    +ja-icon--linkedin
 
-=icon--pinterest
-  +icon("\e004")
+=ja-icon--pinterest
+  +ja-icon("\e004")
     @content
 
-.icon
+.ja-icon
   &--pinterest
-    +icon--pinterest
+    +ja-icon--pinterest
 
-=icon--arrow-left
-  +icon("\e005")
+=ja-icon--arrow-left
+  +ja-icon("\e005")
     @content
 
-.icon
+.ja-icon
   &--arrow-left
-    +icon--arrow-left
+    +ja-icon--arrow-left
 
-=icon--arrow-right
-  +icon("\e006")
+=ja-icon--arrow-right
+  +ja-icon("\e006")
     @content
 
-.icon
+.ja-icon
   &--arrow-right
-    +icon--arrow-right
+    +ja-icon--arrow-right
 
-=icon--arrow-up
-  +icon("\e007")
+=ja-icon--arrow-up
+  +ja-icon("\e007")
     @content
 
-.icon
+.ja-icon
   &--arrow-up
-    +icon--arrow-up
+    +ja-icon--arrow-up
 
-=icon--arrow-down
-  +icon("\e008")
+=ja-icon--arrow-down
+  +ja-icon("\e008")
     @content
 
-.icon
+.ja-icon
   &--arrow-down
-    +icon--arrow-down
+    +ja-icon--arrow-down
+
+=ja-icon--close
+  +ja-icon("\e009")
+    @content
+
+.ja-icon
+  &--close
+    +ja-icon--close
+
+=ja-icon--hamburger
+  +ja-icon("\e010")
+    @content
+
+.ja-icon
+  &--hamburger
+    +ja-icon--hamburger
 
 
