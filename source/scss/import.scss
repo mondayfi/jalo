@@ -17,13 +17,13 @@
 @import "animations.scss";
 
 /* Modules */
-@import "ja-grid.scss";
-@import "ja-splash.scss";
-@import "ja-input.scss";
-@import "ja-topnav.scss";
-@import "ja-select.scss";
-@import "ja-question.scss";
-@import "ja-multipleselect.scss";
-@import "ja-formarea.scss";
-@import "ja-modal.scss";
-@import "ja-nav.scss";
+@import "modules/ja-formarea.scss";
+@import "modules/ja-grid.scss";
+@import "modules/ja-input.scss";
+@import "modules/ja-modal.scss";
+@import "modules/ja-multipleselect.scss";
+@import "modules/ja-nav.scss";
+@import "modules/ja-question.scss";
+@import "modules/ja-select.scss";
+@import "modules/ja-splash.scss";
+@import "modules/ja-topnav.scss";

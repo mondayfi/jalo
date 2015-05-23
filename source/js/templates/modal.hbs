@@ -11,29 +11,11 @@
   <div class="ja-modal__content">
     <div class="ja-grid">
       <div class="ja-answerlist">
-        <h3 class="ja-answerlist__header ja-h3">Minkälaista työtä tarjoat?</h3>
+        <h3 class="ja-answerlist__header ja-h3">{{work-title}}</h3>
         <ul class="ja_list">
-          <li class="ja_list__item"><a href="/details"><span>äidinkielen</span> ja kirjallisuuden lehtori</a></a></li>
-          <li class="ja_list__item"><a href="/details"><span>suomi toisena kielenä </span>-lehtori</a></li>
-          <li class="ja_list__item"><a href="/details"><span>lektor i finska</span>, aineenopettaja</a></li>
-          <li class="ja_list__item"><a href="/details">toimittaja</a></li>
-          <li class="ja_list__item"><a href="/details">tiedottaja</a></li>
-          <li class="ja_list__item"><a href="/details"><span>Web Editor</span></a></li>
-          <li class="ja_list__item"><a href="/details">viestintäkonsultti</a></li>
-          <li class="ja_list__item"><a href="/details">online-tuottaja</a></li>
-          <li class="ja_list__item"><a href="/details">kustannussihteeri </a></li>
-          <li class="ja_list__item"><a href="/details">kustannustoimittaja</a></li>
-          <li class="ja_list__item"><a href="/details">oikolukija</a></li>
-          <li class="ja_list__item"><a href="/details">toimitussihteeri</a></li>
-          <li class="ja_list__item"><a href="/details">projektipäällikkö</a></li>
-          <li class="ja_list__item"><a href="/details">suunnittelija</a></li>
-          <li class="ja_list__item"><a href="/details">koulutussihteeri</a></li>
-          <li class="ja_list__item"><a href="/details">projektitutkija</a></li>
-          <li class="ja_list__item"><a href="/details">tohtorikoulutettava, jatko-opiskelija</a></li>
-          <li class="ja_list__item"><a href="/details">tutkimusavustaja</a></li>
-          <li class="ja_list__item"><a href="/details">maahanmuuttokouluttaja</a></li>
-          <li class="ja_list__item"><a href="/details">suomen kielen kouluttaja</a></li>
-          <li class="ja_list__item"><a href="/details">kielenhuoltokouluttaja</a></li>
+          {{#each work}}
+          <li class="ja_list__item"><a href="/details/{{slug}}">{{name}}</a></li>
+          {{/each}}
         </ul>
       </div>
     </div>
