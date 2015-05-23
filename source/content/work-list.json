@@ -1,0 +1,25 @@
+{
+  "work-title": "Minkälaista työtä tarjoat?",
+  "work": [
+    {
+      "name": "Siivous",
+      "slug": "siivous"
+    },
+    {
+      "name": "Koiran ulkoilutus",
+      "slug": "koiran-ulkoilutus"
+    },
+    {
+      "name": "Kaupassa käyminen",
+      "slug": "kaupassa-kayminen"
+    },
+    {
+      "name": "Tallin siivous",
+      "slug": "tallin-siivous"
+    },
+    {
+      "name": "Lastenvahti",
+      "slug": "lastenvahti"
+    }
+  ]
+}

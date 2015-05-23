@@ -24,14 +24,20 @@ module.exports = {
     dest: dest + "/images"
   },
   styleguide: {
+    src: src + "/scss/**/*.scss",
     tmp: tmp + '/styleguide',
+    dest: [
+      "./source/scss/import.scss"
+    ],
     config: {
       title: 'Jalo Pattern library',
       server: true,
-      disableEncapsulation: true,
+      disableEncapsulation: false,
       rootPath: tmp  + '/styleguide',
       overviewPath: "readme-patternlibrary.md",
-      port: 4000
+      port: 4000,
+      extraHead: '<link href="http://fonts.googleapis.com/css?family=Maven+Pro|Open+Sans:400,600,700" rel="stylesheet" type="text/css">',
+      styleVariables: src + '/scss/_variables-colors.scss'
     }
   },
   vendorstyles: {

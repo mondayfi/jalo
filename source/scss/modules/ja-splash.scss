@@ -1,0 +1,25 @@
+.ja-splash {
+  padding-top: 15vw;
+  height: 100%;
+  &__logo {
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 10vw;
+  }
+
+  &__buttons,
+  &__form {
+    text-align: center;
+    position: absolute;
+    bottom: 5vw;
+    width: 100%;
+
+    .ja-button {
+      margin-bottom: $element-margin;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

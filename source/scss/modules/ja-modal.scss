@@ -6,4 +6,8 @@
     padding: 90px 18px 50px;
     position: relative;
   }
+  &--purple {
+    background: $color-purple;
+    color: $color-white;
+  }
 }

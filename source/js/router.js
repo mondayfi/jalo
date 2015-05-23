@@ -4,6 +4,7 @@ var HomePage = require('./pages/home');
 var LoginPage = require('./pages/login');
 var DetailsPage = require('./pages/details');
 var Modal = require('./pages/modal');
+var Menu = require('./pages/menu');
 // var CollectionDemo = require('./pages/collection-demo');
 // var InfoPage = require('./pages/info');
 // var PersonAddPage = require('./pages/person-add');
@@ -15,8 +16,8 @@ module.exports = Router.extend({
         '': 'home',
         'login': 'loginPage',
         'details': 'detailsPage',
-        'modal': 'modal'
-        // 'info': 'info',
+        'modal': 'modal',
+        'menu': 'menu'
         // 'person/add': 'personAdd',
         // 'person/:id': 'personView',
         // 'person/:id/edit': 'personEdit',
@@ -43,6 +44,12 @@ module.exports = Router.extend({
 
     modal: function() {
         app.trigger('page', new Modal({
+            model: app.me
+        }));
+    },
+
+    menu: function() {
+        app.trigger('page', new Menu({
             model: app.me
         }));
     }

@@ -6,11 +6,13 @@ var MainView = require('./views/main');
 var Me = require('./models/me');
 // var People = require('./models/persons');
 var domReady = require('domready');
+var attachFastClick = require('fastclick');
 
 
 // attach our app to `window` so we can
 // easily access it from the console.
 window.app = app;
+attachFastClick(document.body);
 
 // Extends our main app singleton
 app.extend({

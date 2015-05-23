@@ -1,6 +1,6 @@
 .ja_multipleselect {
-  border: 1px solid #999;
-  box-shadow: #F0F0F0 0 0 0 3px inset,#EDDDF5 2px 3px 0;
+  border: 1px solid $color-black-light;
+  box-shadow: $color-athensgrey 0 0 0 3px inset,$color-grey 2px 3px 0;
   display: table;
   height: 100%;
   padding: 10px 10px 18px;
@@ -17,7 +17,7 @@
     position: relative;
 
     &:after {
-      transition: transform 0.2s ease-in-out,top 0.2s ease-in-out;
+      @include animation('transform 0.3s ease-in-out', 'top 0.2s ease-in-out');
       border: 6px solid transparent;
       border-top: 6px solid currentColor;
       content: '';
@@ -31,15 +31,9 @@
     }
   }
   &--unselected {
-    .ja_multipleselect__name, .ja-eyebrow-note {
+    .ja_multipleselect__name,
+    .ja-eyebrow-note {
       color: $color-grey;
     }
   }
-}
-
-.ja-eyebrow-note {
-  font-size: 1.2rem;
-  color: #999;
-  margin: 0;
-  text-transform: capitalize;
 }

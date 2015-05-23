@@ -12,8 +12,6 @@
   }
 }
 
-
-
 .ja_list {
   list-style: none;
   margin: 0;
@@ -25,8 +23,9 @@
     margin: 0;
     letter-spacing: -1px;
     font-size: 2rem;
-    padding: 15px 15px;
+    padding: 15px 3px;
     display: block;
+    line-height: 1.1em;
     border-bottom: 1px solid $color-grey;
     a {
       display: block;
@@ -38,7 +37,11 @@
       font-weight: 600;
     }
     &:hover {
-      background: $color-lightwhite;
+      background: $color-purple;
+      color: $color-white;
+      span {
+        color: $color-white;
+      }
     }
   }
 }

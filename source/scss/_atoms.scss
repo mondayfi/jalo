@@ -8,10 +8,11 @@
 //
 // Atoms are the most basic buildingblocks
 //
-// .ja-button--purple - purple color
-// .ja-button--green - green color
-// .ja-button--black - black color
-// Default - No color
+// .ja-button--purple - purple
+// .ja-button--green - green
+// .ja-button--white - white
+// .ja-button--grey - grey
+// .ja-button--fullwidth - 100% size
 //
 // markup:
 // <div class="ja-button {$modifiers}">button</div>
@@ -19,12 +20,11 @@
 // Styleguide 2.1
 
 .ja-button {
-  padding: 20px 18px;
+  padding: 20px 20px;
   display: inline-block;
   text-decoration: none;
   text-align: center;
-  @include font-title;
-  @include transition-all;
+  @extend %ja-h4;
 
   &--purple {
     @include btn-theme($color-purple);
