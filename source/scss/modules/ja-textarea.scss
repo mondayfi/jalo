@@ -1,22 +1,22 @@
-// Inputs
+// Textarea
 //
-// These are Jalo's inputs. Label positioning is done with 100% css.
+// Very cool boxes.
 //
 // default          - Default state
-// .ja-input--is-valid - valid
-// .ja-input--is-invalid - invalid
+// .ja-textarea--is-valid - valid
+// .ja-textarea--is-invalid - invalid
 //
 // Markup:
-// <div class="ja-input {$modifiers}">
-//   <input id="username" type="text" class="ja-input__input" required>
-//   <span class="ja-input__highlight"></span>
-//   <span class="ja-input__bar"></span>
-//   <label for="username" class="ja-input__label">Salasana</label>
+// <div class="ja-textarea {$modifiers}">
+//   <textarea id="textarea" type="text" class="ja-textarea__input" required></textarea>
+//   <span class="ja-textarea__highlight"></span>
+//   <span class="ja-textarea__bar"></span>
+//   <label for="textarea" class="ja-textarea__label">Sisältöalue</label>
 // </div>
 //
-// Styleguide 2.2
+// Styleguide 2.6
 
-.ja-input {
+.ja-textarea {
 	position: relative;
 	@include font-title;
 	margin: ($element-margin) 0 0 0;
@@ -31,13 +31,13 @@
     background-color: $color-white;
 		border-radius: 0;
 		outline: none;
-		height: 5rem;
+    line-height: 1.2em;
 		width: 100%;
 		@extend %ja-h4;
     color: $color-black;
     font-weight: 400;
 		margin: 0;
-		padding: 0 10px;
+		padding: 15px 10px;
 
 		&:focus {
 			background-color: $color-white-light;
@@ -59,8 +59,8 @@
     color: $color-black-lighter;
 		cursor: text;
 
-		.ja-input__input:valid ~ &,
-		.ja-input__input:focus ~ & {
+		.ja-textarea__input:valid ~ &,
+		.ja-textarea__input:focus ~ & {
 			@include font-size(14);
 			transform: translateY(-180%);
 		}
@@ -89,7 +89,7 @@
 		pointer-events: none;
 		opacity: 0.5;
 
-		.ja-input__input:focus ~ & {
+		.ja-textarea__input:focus ~ & {
 			@include animation('inputHighlighter 0.3s ease');
 		}
 	}
@@ -118,7 +118,7 @@
 			right: 50%;
 		}
 
-		.ja-input__input:focus ~ & {
+		.ja-textarea__input:focus ~ & {
 			&:after,
 			&:before {
 				width: 50%;
@@ -127,7 +127,7 @@
   }
 
   &--is-invalid {
-    .ja-input {
+    .ja-textarea {
       &__input {
         border-color: $color-invalid;
       }
@@ -147,7 +147,7 @@
   }
 
   &--is-valid {
-    .ja-input {
+    .ja-textarea {
       &__input {
         border-color: $color-valid;
       }

@@ -1,6 +1,19 @@
-.ja_multipleselect {
+// Multiple select
+//
+// These are used instead of a typical html5 multiple select. The reason being the native is shit. This is not.
+//
+// markup:
+// <a href="#" class="ja-multipleselect">
+//   <p class="ja-eyebrow-note">Työnimi</p>
+//   <div class="ja-multipleselect__name">Kotitöitä</div>
+// </a>
+//
+// Styleguide 2.3
+
+.ja-multipleselect {
   border: 1px solid $color-black-light;
-  box-shadow: $color-athensgrey 0 0 0 3px inset,$color-grey 2px 3px 0;
+  background-color: $color-white;
+  box-shadow: $color-athensgrey 0 0 0 3px inset;
   display: table;
   height: 100%;
   padding: 10px 10px 18px;
@@ -17,21 +30,13 @@
     position: relative;
 
     &:after {
-      @include animation('transform 0.3s ease-in-out', 'top 0.2s ease-in-out');
-      border: 6px solid transparent;
-      border-top: 6px solid currentColor;
-      content: '';
-      display: block;
-      height: 0;
-      margin: 5px 0 -4px -12px;
-      width: 0;
-      position: absolute;
-      left: 100%;
-      top: 0;
+      @include icon-arrow-down--small;
     }
   }
+
   &--unselected {
-    .ja_multipleselect__name,
+    border-color: $color-grey;
+    .ja-multipleselect__name,
     .ja-eyebrow-note {
       color: $color-grey;
     }

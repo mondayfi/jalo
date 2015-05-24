@@ -1,11 +1,13 @@
 .ja-modal {
-  height: 620px;
+  height: 100%;
+
   &__content {
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
-    padding: 90px 18px 50px;
+    padding: 70px 10px 50px;
     position: relative;
   }
+
   &--purple {
     background: $color-purple;
     color: $color-white;

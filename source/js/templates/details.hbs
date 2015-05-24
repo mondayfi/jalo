@@ -1,12 +1,12 @@
 <div class="container-js">
   <header class="ja-topnav">
-    <a href="/" class="ja-topnav__logo"><div class="ja-topnav__logoinner"><img src="images/jalo_logo_noiconwhite.svg" alt="Jalo" class="ja-topnav__logoimg"></div></a>
+    <a href="/" class="ja-topnav__logo"><div class="ja-topnav__logoinner"><img src="images/jalo_logo_noiconwhite.svg" alt="" class="ja-topnav__logoimg"></div></a>
     <div class="ja-topnav__right">
       <div class="ja-topnav__item">
-        <a class="ja-icon-navtoggle ja-expand-nav ja-inlineicon--navtogglewhite" href="/menu">Nav</a>
+        <a class="ja-icon--hamburger ja-topnav__hamburger" href="/menu"></a>
       </div>
       <div class="ja-topnav__item">
-        <a class="ja-topnav__login ja-h4" href="/login">Kirjaudu <i class="ja-topnav__login__icon icon--arrow-right"></i></a>
+        <a class="ja-topnav__login ja-h4" href="/login">Kirjaudu <i class="ja-topnav__login__icon ja-icon--arrow-right"></i></a>
       </div>
     </div>
   </header>
@@ -15,16 +15,51 @@
       <h3 class="ja-question__header ja-textaligncenter ja-h3">Minkälaista työtä tarjoat?</h3>
       <div class="ja-formarea">
         <div class="ja-formarea__item">
-          <a href="/modal" class="ja_multipleselect">
+          <a href="/modal" class="ja-multipleselect">
             <p class="ja-eyebrow-note">Työnimi</p>
-            <div class="ja_multipleselect__name">Kotitöitä</div>
+            <div class="ja-multipleselect__name">Kotitöitä</div>
           </a>
         </div>
         <div class="ja-formarea__item">
-          <a href="/modal" class="ja_multipleselect ja_multipleselect--unselected">
+          <a href="/modal" class="ja-multipleselect ja-multipleselect--unselected">
             <p class="ja-eyebrow-note">Valitse</p>
-            <div class="ja_multipleselect__name">Työ</div>
+            <div class="ja-multipleselect__name">Työ</div>
           </a>
+        </div>
+        <div class="ja-formarea__item">
+          <div class="ja-input">
+            <input id="password" type="text" class="ja-input__input" required>
+            <span class="ja-input__validation-message">Oikein!</span>
+            <span class="ja-input__highlight"></span>
+            <span class="ja-input__bar"></span>
+            <label for="password" class="ja-input__label">Salasana</label>
+          </div>
+        </div>
+        <div class="ja-formarea__item">
+          <div class="ja-textarea">
+            <textarea id="textarea" rows="3" class="ja-textarea__input" required></textarea>
+            <span class="ja-textarea__validation-message">Oikein!</span>
+            <span class="ja-textarea__highlight"></span>
+            <span class="ja-textarea__bar"></span>
+            <label for="textarea" class="ja-textarea__label">Sisältöalue</label>
+          </div>
+        </div>
+        <div class="ja-formarea__item">
+          <div class="ja-rangeslider">
+            <label for="points" class="ja-rangeslider__label">Range slider</label>
+            <input class="ja-rangeslider__slider" type="range" name="points" min="0" max="100">
+          </div>
+        </div>
+        <div class="ja-formarea__item">
+          <div href="#" class="ja-select">
+            <select class="ja-select__select">
+              <option selected="selected" value="Valitse">Valitse</option>
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+            </select>
+          </div>
         </div>
       </div>
       <a href="/login" class="ja-button ja-button--grey ja-question__button">Jatka</a>

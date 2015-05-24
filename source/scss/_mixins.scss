@@ -56,36 +56,36 @@
 @mixin btn-theme($btn-color, $btn-text-color: #fff) {
   background-color: $btn-color;
   color: $btn-text-color;
-  border-bottom: 2px solid darken($btn-color, 10%);
+  border-bottom: 1px solid $btn-color;
 
   &:hover {
     background-color: lighten($btn-color, 10%);
     border-bottom: 0;
-    border-top: 2px solid lighten($btn-color, 5%);
+    border-top: 1px solid lighten($btn-color, 10%);
   }
 
   &:active {
     background-color: lighten($btn-color, 5%);
     border-bottom: 0;
-    border-top: 2px solid lighten($btn-color, 10%);
+    border-top: 1px solid lighten($btn-color, 5%);
   }
 }
 
 @mixin btn-theme--invert($btn-color, $btn-text-color: #fff) {
   background-color: $btn-color;
   color: $btn-text-color;
-  border-bottom: 2px solid darken($btn-color, 10%);
+  border-bottom: 1px solid $btn-color;
 
   &:hover {
     background-color: darken($btn-color, 10%);
     border-bottom: 0;
-    border-top: 2px solid darken($btn-color, 15%);
+    border-top: 1px solid darken($btn-color, 10%);
   }
 
   &:active {
     background-color: darken($btn-color, 5%);
     border-bottom: 0;
-    border-top: 2px solid darken($btn-color, 10%);
+    border-top: 1px solid darken($btn-color, 5%);
   }
 }
 
@@ -93,12 +93,8 @@
   background-color: $btn-color;
   color: $btn-text-color;
   border: 1px solid $btn-border-color;
+}
 
-  &:hover {
-    border-color: darken($btn-color, 10%);
-  }
-
-  &:active {
-    border-color: darken($btn-color, 5%);
-  }
+@mixin font-icon {
+  font-family: 'jalo-icons';
 }
