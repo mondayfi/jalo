@@ -33,13 +33,13 @@ var browserifyTask = function(devMode) {
     }
 
     var b = browserify(bundleConfig);
-
+    b.transform(hbsfy);
+    
     var bundle = function() {
       // Log when bundling starts
       bundleLogger.start(bundleConfig.outputName);
 
       return b
-        .transform(hbsfy)
         .bundle()
         // Report compile errors
         .on('error', handleErrors)
