@@ -7,7 +7,6 @@ var koa = require('koa');
 var path = require('path');
 var app = module.exports = koa();
 
-var router = require('./router')(app);
 
 // Logger
 app.use(logger());
@@ -16,8 +15,13 @@ app.use(hbs.middleware({
 }));
 
 
+var router = require('./router')(app);
+app.use(router.routes());
+app.use(router.allowedMethods());
+
 // Serve static files
-app.use(serve(path.join('...', 'dist')));
+console.log(path.join('..', 'dist'));
+app.use(serve(path.join('..', 'dist')));
 
 // Compress
 app.use(compress());

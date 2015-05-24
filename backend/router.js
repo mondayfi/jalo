@@ -1,13 +1,13 @@
 "use strict";
 var path = require('path');
 var glob = require('glob');
-var route = require('koa-route');
-
+var router = require('koa-router');
+var router = router();
 var controllers = {};
 var files = glob.sync(path.join(process.cwd(), 'controllers', '**', '*.js'));
 files.forEach(function(file) {
   var temp = controllers;
-  var parts = path.relative(path.join(process.cwd(), 'services', 'frontend', 'controllers'), file).slice(0, -3).split(path.sep);
+  var parts = path.relative(path.join(process.cwd(), 'controllers'), file).slice(0, -3).split(path.sep);
 
   while (parts.length) {
     if (parts.length === 1) {
@@ -19,6 +19,7 @@ files.forEach(function(file) {
   }
 });
 module.exports = function(app){
-	app.use(route.get('/', controllers.base));
-	
+	router
+	.get('*', controllers.base);
+	return router;	
 };
