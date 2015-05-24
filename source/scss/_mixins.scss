@@ -94,3 +94,7 @@
   color: $btn-text-color;
   border: 1px solid $btn-border-color;
 }
+
+@mixin font-icon {
+  font-family: 'jalo-icons';
+}

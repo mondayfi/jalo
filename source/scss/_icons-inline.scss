@@ -1,0 +1,13 @@
+@mixin icon-arrow-down--small {
+  @include animation('transform 0.3s ease-in-out', 'top 0.2s ease-in-out');
+  border: 6px solid transparent;
+  border-top: 6px solid currentColor;
+  content: '';
+  display: block;
+  height: 0;
+  margin: 5px 0 -4px -12px;
+  width: 0;
+  position: absolute;
+  left: 100%;
+  top: 0;
+}

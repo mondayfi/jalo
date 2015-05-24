@@ -77,7 +77,7 @@ Custom type styles
 */
 .ja-eyebrow-note {
   @include font-size(12);
-  color: $color-white-light;
+  color: $color-grey;
   margin: 0;
   text-transform: capitalize;
 }

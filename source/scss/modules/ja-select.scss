@@ -1,33 +1,53 @@
+// Select
+//
+// Typical select
+//
+// markup:
+// <div class="ja-select">
+// <select class="ja-select__select">
+//   <option value="volvo">Volvo</option>
+//   <option value="saab">Saab</option>
+//   <option value="mercedes">Mercedes</option>
+//   <option value="audi">Audi</option>
+// </select>
+// </div>
+//
+// Styleguide 2.5
+
 .ja-select {
   width: 100%;
-  background: $color-white-light;
+  background: $color-white;
   position: relative;
+  height: 50px;
+  color: $color-purple; // This gives the icon it's color
 
   &:after {
-    position: absolute;
-    content: "\e008";
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    color: $color-black;
-    right: 5px;
-    font-family: 'jalo-icons';
+    @include icon-arrow-down--small;
+    top: 18px;
+    left: auto;
+    right: 10px;
   }
 
   &__select {
+    border-radius: 0;
+    border: 1px solid $color-black-light;
+    box-shadow: $color-athensgrey 0 0 0 3px inset;
+    height: 100%;
+    padding: 10px;
+    position: relative;
     width: 100%;
-    border-left: 0;
-    border-right: 0;
-    border-top: 2px solid $color-purple;
-    border-bottom: 2px solid $color-white;
-    padding: 6px 25px 6px 10px;
+    cursor: pointer;
     margin: 0;
     outline: 0;
     display: inline-block;
+    -webkit-appearance: none;
     appearance: none;
-    border-radius: 6px;
-    background: transparent;
+    background-color: transparent;
     background-clip: padding-box;
-    text-overflow: '';
+    @extend %ja-h4;
+    font-weight: 400;
+    color: $color-black;
+    line-height: 1.2em;
+    margin: 0;
   }
 }

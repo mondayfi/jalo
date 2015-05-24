@@ -1,4 +1,16 @@
-.ja_list {
+// List
+//
+// Basic listing
+//
+// markup:
+// <ul class="ja-list">
+//   <li class="ja-list__item"><a href="#">messenger bag</a></li>
+//   <li class="ja-list__item"><a href="#">food truck</a></li>
+// </ul>
+//
+// Styleguide 2.4
+
+.ja-list {
   list-style: none;
   margin: 0;
   padding: 0;
