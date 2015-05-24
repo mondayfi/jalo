@@ -54,6 +54,7 @@
     "domready": "^1.0.8",
     "fastclick": "~1.0.6",
     "favicon-setter": "^0.1.1",
+    "glob": "^5.0.9",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-util": "^3.0.4",
     "handlebars": "^3.0.3",
