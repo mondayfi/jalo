@@ -1,0 +1,61 @@
+// Range slider
+//
+// A html5 range slider
+//
+// Markup:
+// <div class="ja-rangeslider">
+//   <label for="points" class="ja-rangeslider__label">Range slider</label>
+//   <input class="ja-rangeslider__slider" type="range" name="points" min="0" max="10">
+// </div>
+//
+// Styleguide 2.7
+
+.ja-rangeslider {
+  position: relative;
+  height: 6rem;
+
+  &__label {
+    @extend %ja-h4;
+    color: $color-black;
+    font-weight: 400;
+    margin-bottom: ($element-margin * 1.5);
+    display: block;
+  }
+
+  &__slider {
+    -webkit-appearance: none;
+    width: 100%;
+    border-radius: 0px;
+    height: 10px;
+    border: 1px solid $color-black-light;
+    background-color: $color-white;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      background-color: $color-white;
+      border: 3px solid $color-purple;
+      color: $color-purple;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      cursor: pointer;
+      position: relative;
+
+      &:after {
+          border: 6px solid transparent;
+          border-right: 6px solid currentColor;
+          border-left: 6px solid currentColor;
+          content: '';
+          display: block;
+          height: 0;
+          margin: auto;
+          width: 22px;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          top: 0;
+      }
+    }
+  }
+}

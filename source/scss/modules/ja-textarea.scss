@@ -8,7 +8,7 @@
 //
 // Markup:
 // <div class="ja-textarea {$modifiers}">
-//   <textarea id="textarea" type="text" class="ja-textarea__input" required>
+//   <textarea id="textarea" type="text" class="ja-textarea__input" required></textarea>
 //   <span class="ja-textarea__highlight"></span>
 //   <span class="ja-textarea__bar"></span>
 //   <label for="textarea" class="ja-textarea__label">Sisältöalue</label>
@@ -127,7 +127,7 @@
   }
 
   &--is-invalid {
-    .ja-input {
+    .ja-textarea {
       &__input {
         border-color: $color-invalid;
       }
@@ -147,7 +147,7 @@
   }
 
   &--is-valid {
-    .ja-input {
+    .ja-textarea {
       &__input {
         border-color: $color-valid;
       }
