@@ -4,10 +4,10 @@ var glob = require('glob');
 var router = require('koa-router');
 var router = router();
 var controllers = {};
-var files = glob.sync(path.join(process.cwd(), 'controllers', '**', '*.js'));
+var files = glob.sync(path.join(process.cwd(), 'backend', 'controllers', '**', '*.js'));
 files.forEach(function(file) {
   var temp = controllers;
-  var parts = path.relative(path.join(process.cwd(), 'controllers'), file).slice(0, -3).split(path.sep);
+  var parts = path.relative(path.join(process.cwd(), 'backend', 'controllers'), file).slice(0, -3).split(path.sep);
 
   while (parts.length) {
     if (parts.length === 1) {
