@@ -4,6 +4,10 @@
   "description": "Jalo application",
   "license": "MIT",
   "author": "Samuel Klinkmann, Pyry Kovanen, Teppo Meriläinen, Patrick Lindholm",
+  "main": "server.js",
+  "scripts": {
+    "start": "iojs server.js"
+  },
   "repository": {
     "type": "git",
     "url": "git@bitbucket.org:mondaydigital/jalo.git"

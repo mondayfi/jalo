@@ -7,7 +7,7 @@ var koa = require('koa');
 var path = require('path');
 var app = module.exports = koa();
 
-var port = process.env.port || 3000;
+var port = process.env.PORT || 3000;
 
 
 // Logger
