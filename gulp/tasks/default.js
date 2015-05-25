@@ -1,3 +1,3 @@
 var gulp = require('gulp');
 
-gulp.task('default', ['scss', 'images', 'markup', 'watch']);
+gulp.task('default', ['scss', 'images', 'markup', 'browserify']);
