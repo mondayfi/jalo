@@ -7,22 +7,21 @@ var koa = require('koa');
 var path = require('path');
 var app = module.exports = koa();
 
+var port = process.env.port || 3000;
 
 
 // Logger
 app.use(logger());
 app.use(hbs.middleware({
-  viewPath: path.join(process.cwd(), 'views')
+  viewPath: path.join(process.cwd(), 'backend', 'views')
 }));
 
 
-app.use(serve(path.join('..', 'dist')));
-var router = require('./router')(app);
+app.use(serve('./dist'));
+var router = require('./backend/router')(app);
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-// Serve static files
-console.log(path.join('..', 'dist'));
 
 // Compress
 app.use(compress());
