@@ -6,7 +6,8 @@
   "author": "Samuel Klinkmann, Pyry Kovanen, Teppo Meriläinen, Patrick Lindholm",
   "main": "server.js",
   "scripts": {
-    "start": "iojs server.js"
+    "start": "iojs server.js",
+    "postinstall": "gulp default"
   },
   "repository": {
     "type": "git",
