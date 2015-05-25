@@ -52,11 +52,20 @@ body {
   line-height: 1.5em;
   font-weight: 300;
 }
+
 .ja-h4,
 %ja-h4 {
   @include font-size(18);
 }
 
+.ja-h5,
+%ja-h5 {
+  @include font-title;
+  font-weight: 400;
+  @include font-size(12);
+}
+
+%ja-p,
 p {
   @include font-size(16);
   line-height: 150%;

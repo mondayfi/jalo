@@ -7,7 +7,7 @@ var handleErrors = require('../util/handleErrors');
 gulp.task('styleguide:generate', function() {
   return gulp
     .src(config.styleguide.src)
-        .on('error', handleErrors)
+    .on('error', handleErrors)
     .pipe(styleguide.generate(config.styleguide.config))
     .on('error', handleErrors)
     .pipe(gulp.dest(config.styleguide.tmp));
