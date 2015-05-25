@@ -25,7 +25,7 @@
   }
 
   &--green {
-    @include btn-theme($color-green);
+    @include btn-theme($color-valid);
   }
 
   &--white {
