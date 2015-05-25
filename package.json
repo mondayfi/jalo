@@ -8,6 +8,9 @@
     "type": "git",
     "url": "git@bitbucket.org:mondaydigital/jalo.git"
   },
+  "engines": {
+    "iojs": "2.1.x"
+  },
   "config": {
     "port": 8080,
     "hostname": "localhost",
