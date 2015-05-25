@@ -26,7 +26,6 @@ var startServer = function() {
 		stopServer();
 	}
 	var args = ['--', config.processFile];
-	console.log(config.processFile);
 	serviceProcess =  spawn('iojs', args, {cwd: config.folder});
 
 	serviceProcess.stdout.setEncoding('utf8');
