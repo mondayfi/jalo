@@ -13,12 +13,12 @@ var port = process.env.PORT || 3000;
 // Logger
 app.use(logger());
 app.use(hbs.middleware({
-  viewPath: path.join(process.cwd(), 'backend', 'views')
+  viewPath: path.join(process.cwd(), 'views')
 }));
 
 
-app.use(serve('./dist'));
-var router = require('./backend/router')(app);
+app.use(serve('../dist'));
+var router = require('./router')(app);
 app.use(router.routes());
 app.use(router.allowedMethods());
 
