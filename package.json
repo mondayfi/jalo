@@ -7,7 +7,7 @@
   "main": "server.js",
   "scripts": {
     "start": "iojs server.js",
-    "postinstall": "gulp default"
+    "postinstall": "gulp"
   },
   "repository": {
     "type": "git",
