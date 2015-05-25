@@ -1,8 +1,14 @@
 var dest = "./dist";
 var src = './source';
 var tmp = './tmp';
+var backend = './backend'
 
 module.exports = {
+  server: {
+    folder: backend,
+    src: backend + '**/*.js',
+    processFile: 'server.js'
+  },
   browserSync: {
     server: {
       baseDir: dest,
