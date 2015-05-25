@@ -6,8 +6,8 @@
   "author": "Samuel Klinkmann, Pyry Kovanen, Teppo Meriläinen, Patrick Lindholm",
   "main": "server.js",
   "scripts": {
-    "start": "iojs server.js",
-    "postinstall": "gulp"
+    "start": "gulp deploy",
+    "postinstall": "npm install gulp"
   },
   "repository": {
     "type": "git",
