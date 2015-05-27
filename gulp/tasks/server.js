@@ -43,4 +43,4 @@ var startServer = function() {
 gulp.task('server', startServer);
 
 
-module.exports = startServer();
+module.exports = startServer;

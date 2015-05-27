@@ -13,6 +13,9 @@
 }
 
 @mixin keyframes($animationName) {
+    @-webkit-keyframes $animationName {
+        @content;
+    }
     @keyframes $animationName {
         @content;
     }
