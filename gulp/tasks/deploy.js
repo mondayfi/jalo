@@ -2,7 +2,7 @@ var gulp 				= require('gulp');
 var runSequence 		= require('run-sequence');
 
 gulp.task('build', function(cb){
-   runSequence('iconFont', 'favicons', 'sass', 'styleguide', 'vendorstyles', 'images', 'markup', 'html', 'browserify', 'server', cb);
+   runSequence('iconFont', 'favicons', 'sass', 'styleguide', 'vendorstyles', 'images', 'markup', 'html', 'browserify', cb);
 });
 
 gulp.task('deploy', function(cb){
