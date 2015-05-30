@@ -20,49 +20,7 @@
             <div class="ja-multipleselect__name">Kotitöitä</div>
           </a>
         </div>
-        <div class="ja-formarea__item">
-          <a href="/modal" class="ja-multipleselect ja-multipleselect--unselected">
-            <p class="ja-eyebrow-note">Valitse</p>
-            <div class="ja-multipleselect__name">Työ</div>
-          </a>
-        </div>
-        <div class="ja-formarea__item">
-          <div class="ja-input">
-            <input id="password" type="text" class="ja-input__input" required>
-            <span class="ja-input__validation-message">Oikein!</span>
-            <span class="ja-input__highlight"></span>
-            <span class="ja-input__bar"></span>
-            <label for="password" class="ja-input__label">Salasana</label>
-          </div>
-        </div>
-        <div class="ja-formarea__item">
-          <div class="ja-textarea">
-            <textarea id="textarea" rows="3" class="ja-textarea__input" required></textarea>
-            <span class="ja-textarea__validation-message">Oikein!</span>
-            <span class="ja-textarea__highlight"></span>
-            <span class="ja-textarea__bar"></span>
-            <label for="textarea" class="ja-textarea__label">Sisältöalue</label>
-          </div>
-        </div>
-        <div class="ja-formarea__item">
-          <div class="ja-rangeslider">
-            <label for="points" class="ja-rangeslider__label">Range slider</label>
-            <input class="ja-rangeslider__slider" type="range" name="points" min="0" max="100">
-          </div>
-        </div>
-        <div class="ja-formarea__item">
-          <div href="#" class="ja-select">
-            <select class="ja-select__select">
-              <option selected="selected" value="Valitse">Valitse</option>
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <a href="/login" class="ja-button ja-button--grey ja-question__button">Jatka</a>
+      <a href="#" class="ja-button {{#if buttonActive}}ja-button--purple {{else}} ja-button--grey{{/if}} ja-question__button">Jatka</a>
     </div>
   </div>
 </div>

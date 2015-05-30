@@ -37,8 +37,9 @@ module.exports = View.extend({
                 document.scrollTop = 0;
 
                 // add a class specifying it's active
-                dom.addClass(newView.el, 'active');
-
+                setTimeout(function() {
+                  dom.addClass(newView.el, 'active');
+                }, 500);
                 // store an additional reference, just because
                 app.currentPage = newView;
             }

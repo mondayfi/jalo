@@ -1,0 +1,11 @@
+.ja-floatingbutton {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  &__inner {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+}

@@ -21,13 +21,13 @@
     margin: 0;
     letter-spacing: -1px;
     font-size: 2rem;
-    padding: 15px 10px;
     display: block;
     line-height: 1.1em;
     border-bottom: 1px solid $color-grey;
     text-transform: capitalize;
 
     a {
+      padding: 15px 10px;
       display: block;
       height: 100%;
       width: 100%;
