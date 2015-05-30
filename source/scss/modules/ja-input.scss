@@ -62,7 +62,7 @@
 		.ja-input__input:valid ~ &,
 		.ja-input__input:focus ~ & {
 			@include font-size(14);
-			transform: translateY(-180%);
+			transform: translateY(-130%);
 		}
 	}
 

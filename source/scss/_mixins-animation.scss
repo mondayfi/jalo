@@ -1,22 +1,22 @@
 @mixin animation($animate...) {
-    $max: length($animate);
-    $animations: '';
+  $max: length($animate);
+  $animations: '';
 
-    @for $i from 1 through $max {
-        $animations: $animations + nth($animate, $i);
+  @for $i from 1 through $max {
+    $animations: $animations + nth($animate, $i);
 
-        @if $i < $max {
-            $animations: $animations + ", ";
-        }
+    @if $i < $max {
+        $animations: $animations + ", ";
     }
-    animation: $animations;
+  }
+  animation: $animations;
 }
 
 @mixin keyframes($animationName) {
-    // @-webkit-keyframes $animationName {
-    //     @content;
-    // }
-    // @keyframes $animationName {
-    //     @content;
-    // }
+    @-webkit-keyframes $animationName {
+        @content;
+    }
+    @keyframes $animationName {
+        @content;
+    }
 }

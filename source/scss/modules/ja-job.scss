@@ -1,0 +1,15 @@
+.ja-job {
+  &__title {
+    @extend %ja-h1;
+    color: $color-white;
+    font-weight: 200;
+    line-height: 1.25em;
+    margin: 0;
+    text-shadow: 0 0 2px $color-black;
+  }
+}
+
+.ja-job-map {
+  @extend %ja-p;
+  margin-bottom: 0;
+}
