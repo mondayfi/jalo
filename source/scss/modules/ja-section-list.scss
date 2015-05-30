@@ -1,0 +1,23 @@
+.ja-section-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: $element-margin;
+
+  &__item {
+    border-left: 0;
+    border-color: $color-border;
+    border-style: solid;
+    border-top-width: 0;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    flex: 1 1 40%;
+    padding: 10px 10px;
+
+    &:nth-child(2n+2) {
+      border-right: 0;
+    }
+  }
+}
