@@ -13,22 +13,10 @@
 }
 
 @mixin keyframes($animationName) {
-    @-webkit-keyframes $animationName {
-        @content;
-    }
-    @keyframes $animationName {
-        @content;
-    }
+    // @-webkit-keyframes $animationName {
+    //     @content;
+    // }
+    // @keyframes $animationName {
+    //     @content;
+    // }
 }
-
-@mixin test-anim-start() {
-  transform: translate3d(0, -20px, 0);
-  opacity: 0;
-}
-
-@mixin test-anim-end() {
-  transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
-  transform: translate3d(0, 0, 0);
-  opacity: 1;
-}
-
