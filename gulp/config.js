@@ -62,7 +62,7 @@ module.exports = {
     name: 'Jalo Icons',
     src: src + '/icons/*.svg',
     dest: dest + '/fonts',
-    sassDest: src + '/scss',
+    sassDest: src + '/scss/utils',
     template: './gulp/tasks/iconFont/template.sass.swig',
     sassOutputName: '_icons.sass',
     fontPath: '../fonts',

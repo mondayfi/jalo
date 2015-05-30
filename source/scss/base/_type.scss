@@ -1,9 +1,3 @@
-// Fonts and texts
-//
-// Font styling.
-//
-// Styleguide 1.0
-
 // Headings
 //
 // Headings don't get any styles by default. This is because markup and styles usually don't compute. Heading styles are .ja-hX. If you want to use these styles in your css you should extend them instead of including them. This will create smaller compiled css. You do this with the command @extend %ja-hX.

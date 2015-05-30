@@ -1,40 +1,66 @@
-/* Definitions  */
-@import "_reset.scss";
-@import "_icons.sass";
-@import "_icons-inline.scss";
-@import "_variables.scss";
-@import "_variables-colors.scss";
-@import "_mixins.scss";
-@import "_mixins-form.scss";
-@import "_mixins-animation.scss";
-@import "_zindex.scss";
-@import "_type.scss";
-@import "_atoms.scss";
+// Utils
+//
+// The utils folder gathers all Sass tools and helpers used across the project. Every global variable function mixin and placeholder should be put in here.
+// The rule of thumb for this folder is that it should not output a single line of CSS when compiled on its own. These are nothing but helpers.
+@import "utils/_icons-inline.scss";
+@import "utils/_icons.sass";
+@import "utils/_mixins-animation.scss";
+@import "utils/_mixins.scss";
+@import "utils/_mixins-form.scss";
+@import "utils/_animations.scss";
+@import "utils/_variables.scss";
+@import "utils/_variables-colors.scss";
+@import "utils/_zindex.scss";
 
-/* Global */
-@import "global.scss";
-@import "helper-classes.scss";
-@import "animations.scss";
+// Base
+//
+// The base folder holds what we might call the boilerplate code for the project. In here, you will find the reset file, some typographic rules, and helper classes and such.
+@import "base/_global.scss";
+@import "base/_reset.scss";
+@import "base/_type.scss";
+@import "base/_helper-classes.scss";
 
-/* Modules */
+// Styleguide
+//
+// The styleguide folder is for creating the main categories in the styleguide.
+// These files should NOT include any styles. Only KSS markup.
+@import "styleguide/_atoms.scss";
+@import "styleguide/_fonts.scss";
+@import "styleguide/_grid.scss";
+
+// Layout
+//
+// The layout folder contains everything that takes part in laying out the application. This folder contains the styles for the main parts of the site (header, footer, navigation, sidebar…), the grid system etc..
+@import "layout/ja-content.scss";
+@import "layout/ja-grid.scss";
+@import "layout/ja-topnav.scss";
+@import "layout/ja-modal.scss";
+
+// Pages
+//
+// If you are creating page specific styles it is better to put them in a pages folder, in a file named after the page. Try to create styles that are as modular as possible, so that we don't have that many styles here.
+@import "pages/ja-job.scss";
+@import "pages/ja-job-author.scss";
+@import "pages/ja-splash.scss";
+
+// Modules
+//
+// While layout/ is macro (defining the global wireframe), modules/ is more focused on smaller bits. It contains all kind of specific modules like heros, select elements, range slider, and basically anything along those lines. Basically when you are creating some new styles, usually you would create a module and place it here.
 @import "modules/ja-answerlist.scss";
+@import "modules/ja-button-floating.scss";
 @import "modules/ja-button.scss";
-@import "modules/ja-content.scss";
-@import "modules/ja-floatingbutton.scss";
 @import "modules/ja-formarea.scss";
-@import "modules/ja-grid.scss";
 @import "modules/ja-hero.scss";
 @import "modules/ja-input.scss";
-@import "modules/ja-job.scss";
-@import "modules/ja-job-author.scss";
 @import "modules/ja-list.scss";
-@import "modules/ja-modal.scss";
 @import "modules/ja-multipleselect.scss";
 @import "modules/ja-nav.scss";
 @import "modules/ja-question.scss";
 @import "modules/ja-range.scss";
 @import "modules/ja-section-list.scss";
 @import "modules/ja-select.scss";
-@import "modules/ja-splash.scss";
 @import "modules/ja-textarea.scss";
-@import "modules/ja-topnav.scss";
+
+// Themes
+//
+// Later on we might be creating themes, this is where those styles should go.
