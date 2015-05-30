@@ -12,15 +12,18 @@
   </header>
   <div class="ja-grid">
     <div class="ja-question">
-      <h3 class="ja-question__header ja-textaligncenter ja-h3">Minkälaista työtä tarjoat?</h3>
-      <div class="ja-formarea">
-        <div class="ja-formarea__item">
-          <a href="/modal" class="ja-multipleselect">
-            <p class="ja-eyebrow-note">Työnimi</p>
-            <div class="ja-multipleselect__name">Kotitöitä</div>
-          </a>
+      <h3 class="ja-question__header ja-textaligncenter ja-h3">Lisää kuva</h3>
+      <div class="ja-formarea__item">
+        <div href="#" class="ja-select">
+          <select class="ja-select__select">
+            <option selected="selected" value="Valitse">Valitse</option>
+            <option value="volvo">Ei oo kuvaa</option>
+            <option value="saab">Ootas kun otan</option>
+            <option value="mercedes">Juupajuu</option>
+          </select>
         </div>
-      <a href="#" class="ja-button {{#if buttonActive}}ja-button--purple {{else}} ja-button--grey{{/if}} ja-question__button">Jatka</a>
+      </div>
+      <a href="/details4" class="ja-button ja-button--purple ja-question__button">Jatka</a>
     </div>
   </div>
 </div>

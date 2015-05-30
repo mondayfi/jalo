@@ -12,15 +12,13 @@
   </header>
   <div class="ja-grid">
     <div class="ja-question">
-      <h3 class="ja-question__header ja-textaligncenter ja-h3">Minkälaista työtä tarjoat?</h3>
-      <div class="ja-formarea">
-        <div class="ja-formarea__item">
-          <a href="/modal" class="ja-multipleselect">
-            <p class="ja-eyebrow-note">Työnimi</p>
-            <div class="ja-multipleselect__name">Kotitöitä</div>
-          </a>
+      <h3 class="ja-question__header ja-textaligncenter ja-h3">Paljonko maksat?</h3>
+      <div class="ja-formarea__item">
+        <div class="ja-rangeslider">
+          <input class="ja-rangeslider__slider" type="range" name="points" min="0" max="100">
         </div>
-      <a href="#" class="ja-button {{#if buttonActive}}ja-button--purple {{else}} ja-button--grey{{/if}} ja-question__button">Jatka</a>
+      </div>
+      <a href="/details5" class="ja-button ja-button--purple ja-question__button">Jatka</a>
     </div>
   </div>
 </div>

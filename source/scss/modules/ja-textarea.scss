@@ -62,7 +62,7 @@
 		.ja-textarea__input:valid ~ &,
 		.ja-textarea__input:focus ~ & {
 			@include font-size(14);
-			transform: translateY(-180%);
+			transform: translateY(-130%);
 		}
 	}
 
@@ -105,7 +105,7 @@
 			content: '';
 			height: 2px;
 			width: 0;
-			bottom: 1px;
+			bottom: 3px;
 			position: absolute;
 			background: $color-purple;
 		}

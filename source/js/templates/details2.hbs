@@ -12,15 +12,17 @@
   </header>
   <div class="ja-grid">
     <div class="ja-question">
-      <h3 class="ja-question__header ja-textaligncenter ja-h3">Minkälaista työtä tarjoat?</h3>
-      <div class="ja-formarea">
-        <div class="ja-formarea__item">
-          <a href="/modal" class="ja-multipleselect">
-            <p class="ja-eyebrow-note">Työnimi</p>
-            <div class="ja-multipleselect__name">Kotitöitä</div>
-          </a>
+      <h3 class="ja-question__header ja-textaligncenter ja-h3">Mitä haluat kertoa työntekijälle?</h3>
+      <div class="ja-formarea__item">
+        <div class="ja-textarea">
+          <textarea id="textarea" rows="3" class="ja-textarea__input" required></textarea>
+          <span class="ja-textarea__validation-message">Oikein!</span>
+          <span class="ja-textarea__highlight"></span>
+          <span class="ja-textarea__bar"></span>
+          <label for="textarea" class="ja-textarea__label">Kerro se tässä!</label>
         </div>
-      <a href="#" class="ja-button {{#if buttonActive}}ja-button--purple {{else}} ja-button--grey{{/if}} ja-question__button">Jatka</a>
+      </div>
+      <a href="/details3" class="ja-button ja-button--purple ja-question__button">Jatka</a>
     </div>
   </div>
 </div>
