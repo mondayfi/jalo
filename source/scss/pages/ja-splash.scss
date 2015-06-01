@@ -18,6 +18,10 @@
     text-align: center;
   }
 
+  &__field-container {
+    margin-bottom: $element-margin;
+  }
+
   &__buttons,
   &__form {
     text-align: center;
