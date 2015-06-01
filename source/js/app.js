@@ -12,6 +12,9 @@ var attachFastClick = require('fastclick');
 // attach our app to `window` so we can
 // easily access it from the console.
 window.app = app;
+
+// Attaches fastclick to body, removes 300ms delay on mobile
+// TODO: Check the place where this should be initiated. This might be the wrong place
 attachFastClick(document.body);
 
 // Extends our main app singleton

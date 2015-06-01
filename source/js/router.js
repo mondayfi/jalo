@@ -29,11 +29,11 @@ module.exports = Router.extend({
         'details5': 'detailsPage5',
         'modal': 'modal',
         'menu': 'menu',
-        'jobdetails': 'jobDetails'
+        'jobdetails': 'jobDetails',
         // 'person/add': 'personAdd',
         // 'person/:id': 'personView',
         // 'person/:id/edit': 'personEdit',
-        // '(*path)': 'catchAll'
+        '(*path)': 'catchAll'
     },
 
     // ------- ROUTE HANDLERS ---------
@@ -96,6 +96,10 @@ module.exports = Router.extend({
         app.trigger('page', new JobDetailsPage({
             model: app.me
         }));
+    },
+
+    catchAll: function () {
+        this.redirectTo('');
     }
 
     // collectionDemo: function () {
@@ -126,8 +130,4 @@ module.exports = Router.extend({
     //         id: id
     //     }));
     // },
-
-    // catchAll: function () {
-    //     this.redirectTo('');
-    // }
 });

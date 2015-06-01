@@ -2,20 +2,9 @@
   <div class="ja-grid" style="height: 100%;">
     <div class="ja-splash">
       <a href="/"><img src="images/jalo_logo.svg" alt="Jalo logo" class="ja-splash__logo"></a>
-      <form class="ja-splash__form">
-        <div class="ja-input">
-          <input id="kayttajatunnus" type="text" class="ja-input__input" required>
-          <span class="ja-input__highlight"></span>
-          <span class="ja-input__bar"></span>
-          <label for="kayttajatunnus" class="ja-input__label">Käyttäjätunnus</label>
-        </div>
-        <div class="ja-input ja-input--nomargin">
-          <input id="password" type="password" class="ja-input__input" required>
-          <span class="ja-input__highlight"></span>
-          <span class="ja-input__bar"></span>
-          <label for="password" class="ja-input__label">Salasana</label>
-        </div>
-         <a href="/details" class="ja-button ja-button--purple ja-button--fullwidth">Kirjaudu</a>
+      <form data-hook="field-container" class="ja-splash__form">
+        <fieldset data-hook="field-container" class="ja-splash__field-container"></fieldset>
+        <a href="/details" data-hook="submit" type="submit"  class="ja-button ja-button--purple ja-button--fullwidth">Kirjaudu</a>
       </form>
     </div>
   </div>

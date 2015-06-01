@@ -40,7 +40,6 @@
 		padding: 0 10px;
 
 		&:focus {
-			background-color: $color-white-light;
       border-color: $color-purple;
 		}
 	}
@@ -51,18 +50,18 @@
 		color: $color-black;
 		position: absolute;
     @extend %ja-h4;
-		top: 1.8rem;
+		top: 1rem;
 		left: 1rem;
     border-radius: 5px;
     background: $color-white;
-    padding: 2px 5px;
+    padding: 6px 5px;
     color: $color-black-lighter;
 		cursor: text;
 
-		.ja-input__input:valid ~ &,
-		.ja-input__input:focus ~ & {
+		&--floating {
 			@include font-size(14);
-			transform: translateY(-130%);
+			transform: translateY(-90%);
+      padding: 2px 5px;
 		}
 	}
 
