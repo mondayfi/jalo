@@ -3,6 +3,6 @@ var modal = require('../templates/modal.hbs');
 
 
 module.exports = PageView.extend({
-    pageTitle: 'Modal',
+    pageTitle: 'Jalo',
     template: modal
 });

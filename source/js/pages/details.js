@@ -3,9 +3,9 @@ var details = require('../templates/details.hbs');
 
 
 module.exports = PageView.extend({
-    pageTitle: 'Details',
+    pageTitle: 'Jalo',
     template: details,
     initialize: function (spec) {
-      console.log("init")
+      console.log("init");
     }
 });

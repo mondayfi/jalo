@@ -4,7 +4,7 @@ var login = require('../templates/login.hbs');
 
 
 module.exports = PageView.extend({
-		pageTitle: 'Login',
+		pageTitle: 'Jalo',
 		template: login,
 		subviews: {
 				form: {
