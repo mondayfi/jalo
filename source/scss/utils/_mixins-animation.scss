@@ -13,7 +13,7 @@
 }
 
 @mixin keyframes($animationName) {
-  @keyframes $animationName {
-    @content;
-  }
+  // @keyframes $animationName {
+  //   @content;
+  // }
 }
