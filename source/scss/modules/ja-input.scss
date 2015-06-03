@@ -58,7 +58,9 @@
     color: $color-black-lighter;
 		cursor: text;
 
-		&--floating {
+		&--floating,
+    .ja-input__input:valid ~ &,
+    .ja-input__input:focus ~ & {
 			@include font-size(14);
 			transform: translateY(-90%);
       padding: 2px 5px;

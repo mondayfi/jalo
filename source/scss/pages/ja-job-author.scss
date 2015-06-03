@@ -13,14 +13,13 @@
     border: 2px solid $color-border;
     margin: 0 auto;
   }
+  &__image {
+    width: 100%;
+  }
 
   &__cell {
     display: table-cell;
     vertical-align: middle;
-  }
-
-  &__image {
-    width: 100%;
   }
 
   &__name {

@@ -1,11 +1,14 @@
 .ja-topnav {
   height: $topnav-height;
-  z-index: $zindex1;
+  z-index: $topnav-zindex;
   color: $color-white;
   position: relative;
   backface-visibility: hidden;
   width: 100%;
   background: linear-gradient(to right, #2D5491 0%, #662D91 59%, #602A91 87%);
+  position: fixed;
+  top: 0;
+  left: 0;
 
   &__logo {
     padding: 6px 0px 5px 10px;
@@ -95,10 +98,6 @@ Modifiers
   &--white {
     background: $color-white;
     border-bottom: 1px solid $color-grey;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: $zindex1;
 
     .ja-topnav__logoinner {
       border-color: $color-black;
@@ -109,9 +108,5 @@ Modifiers
   &--purple {
     background: $color-purple;
     border-bottom: 1px solid rgba(0,0,0,0.3);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: $zindex1;
   }
 }

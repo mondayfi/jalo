@@ -3,6 +3,6 @@ var jobDetails = require('../templates/job-details.hbs');
 
 
 module.exports = PageView.extend({
-    pageTitle: 'Job details',
+    pageTitle: 'Jalo',
     template: jobDetails
 });
