@@ -7,7 +7,6 @@
 @import "utils/_mixins-animation.scss";
 @import "utils/_mixins.scss";
 @import "utils/_mixins-form.scss";
-@import "utils/_animations.scss";
 @import "utils/_variables.scss";
 @import "utils/_variables-colors.scss";
 @import "utils/_zindex.scss";
@@ -15,8 +14,8 @@
 // Base
 //
 // The base folder holds what we might call the boilerplate code for the project. In here, you will find the reset file, some typographic rules, and helper classes and such.
-@import "base/_global.scss";
 @import "base/_reset.scss";
+@import "base/_global.scss";
 @import "base/_type.scss";
 @import "base/_helper-classes.scss";
 
@@ -41,6 +40,7 @@
 // If you are creating page specific styles it is better to put them in a pages folder, in a file named after the page. Try to create styles that are as modular as possible, so that we don't have that many styles here.
 @import "pages/ja-job.scss";
 @import "pages/ja-job-author.scss";
+@import "pages/ja-settings.scss";
 @import "pages/ja-splash.scss";
 
 // Modules
@@ -48,6 +48,7 @@
 // While layout/ is macro (defining the global wireframe), modules/ is more focused on smaller bits. It contains all kind of specific modules like heros, select elements, range slider, and basically anything along those lines. Basically when you are creating some new styles, usually you would create a module and place it here.
 @import "modules/ja-answerlist.scss";
 @import "modules/ja-button-floating.scss";
+@import "modules/ja-button-list.scss";
 @import "modules/ja-button.scss";
 @import "modules/ja-formarea.scss";
 @import "modules/ja-hero.scss";

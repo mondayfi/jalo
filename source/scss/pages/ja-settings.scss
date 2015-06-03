@@ -1,0 +1,62 @@
+.ja-settings {
+  $ja-settings-header-height: 300px;
+  padding-top: 30px;
+  overflow: hidden;
+  position: relative;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: -10%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 120%;
+    height: $ja-settings-header-height;
+    filter: blur(10px); // might be super slow on some browsers
+    opacity: 0.7;
+    z-index: $zindex1;
+  }
+
+  &__bg-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: ($ja-settings-header-height + 40);
+    z-index: $zindex2;
+    background: linear-gradient(to bottom, transparent 0%, transparent 59%, $color-white-light 87%);
+  }
+
+  &__content {
+    z-index: $zindex3;
+  }
+
+  &__imagewrap {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border: 3px solid $color-white;
+    margin: 0 auto;
+    margin-bottom: ($element-margin / 2);
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__authorname {
+    @extend %ja-h3;
+    color: $color-white;
+    margin-bottom: $element-margin;
+  }
+}
+
+.ja-settings-form {
+  &__title {
+    color: $color-white;
+  }
+  &__submit {
+    margin-top: $element-margin;
+  }
+}

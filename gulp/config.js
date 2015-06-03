@@ -26,7 +26,7 @@ module.exports = {
     }
   },
   images: {
-    src: src + "/images/**.*",
+    src: src + "/images/**/**.*",
     dest: dest + "/images"
   },
   styleguide: {

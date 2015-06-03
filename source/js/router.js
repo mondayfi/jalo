@@ -11,6 +11,10 @@ var DetailsPage5 = require('./pages/details5');
 var JobDetailsPage = require('./pages/job-details');
 var Modal = require('./pages/modal');
 var Menu = require('./pages/menu');
+var SettingsPage = require('./pages/settings');
+var ProfilePage = require('./pages/profile');
+var WelcomeUserPage = require('./pages/welcomeuser');
+var PreviousWorkPage = require('./pages/previous-work');
 // var CollectionDemo = require('./pages/collection-demo');
 // var InfoPage = require('./pages/info');
 // var PersonAddPage = require('./pages/person-add');
@@ -30,6 +34,10 @@ module.exports = Router.extend({
         'modal': 'modal',
         'menu': 'menu',
         'jobdetails': 'jobDetails',
+        'settings': 'settingsPage',
+        'profile': 'profilePage',
+        'welcome': 'welcomeUserPage',
+        'previous-work': 'previousWorkPage',
         // 'person/add': 'personAdd',
         // 'person/:id': 'personView',
         // 'person/:id/edit': 'personEdit',
@@ -94,6 +102,30 @@ module.exports = Router.extend({
 
     jobDetails: function() {
         app.trigger('page', new JobDetailsPage({
+            model: app.me
+        }));
+    },
+
+    settingsPage: function() {
+        app.trigger('page', new SettingsPage({
+            model: app.me
+        }));
+    },
+
+    profilePage: function() {
+        app.trigger('page', new ProfilePage({
+            model: app.me
+        }));
+    },
+
+    welcomeUserPage: function() {
+        app.trigger('page', new WelcomeUserPage({
+            model: app.me
+        }));
+    },
+
+    previousWorkPage: function() {
+        app.trigger('page', new PreviousWorkPage({
             model: app.me
         }));
     },

@@ -24,8 +24,10 @@
     display: block;
     line-height: 1.1em;
     border-bottom: 1px solid $color-grey;
-    text-transform: capitalize;
 
+    &:last-child {
+      border-bottom: 0;
+    }
     a {
       padding: 15px 10px;
       display: block;
@@ -36,6 +38,16 @@
     &:hover {
       background: $color-purple;
       color: $color-white;
+    }
+  }
+  &--with-bg {
+    .ja-list__item {
+      background-color: $color-white;
+
+      &:hover {
+        background-color: $color-purple;
+        color: $color-white;
+      }
     }
   }
 }

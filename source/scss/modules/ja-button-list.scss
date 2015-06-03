@@ -1,0 +1,25 @@
+.ja-button-list {
+  &__item {
+    border: 0;
+    background-color: $color-purple;
+    border-color: $color-border-darker;
+    border-style: solid;
+    border-bottom-width: 1px;
+    text-align: left;
+    padding: 17px 10px;
+    color: $color-white;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    margin: 0;
+    @extend %ja-p;
+
+    &:hover {
+      background-color: darken($color-purple, 5%);
+    }
+    &:active {
+      border-bottom-width: 0;
+      border-top-width: 1px;
+    }
+  }
+}

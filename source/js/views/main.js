@@ -24,7 +24,7 @@ module.exports = View.extend({
     },
     render: function () {
         // some additional stuff we want to add to the document head
-        // document.head.appendChild(domify(headTmpl()));
+        document.head.appendChild(domify(headTmpl()));
 
         // main renderer
         this.renderWithTemplate(this);
@@ -40,18 +40,45 @@ module.exports = View.extend({
                 setTimeout(function() {
                   dom.addClass(newView.el, 'active');
                 }, 500);
+
                 // store an additional reference, just because
                 app.currentPage = newView;
             }
         });
 
-        // setting a favicon for fun (note, it's dynamic)
-        // setFavicon('/favicon.ico');
+        // Samuel did this to create an animated view.
+        // this.pageSwitcher = new ViewSwitcher(this.queryByHook('js-app-container'), {
+        //     // whether or not to wait for remove to be done before starting show
+        //     waitForRemove: true,
+        //     // here we provide a few things to do before the element gets
+        //     // removed from the DOM.
+        //     hide: function (oldView, cb) {
+        //         // it's inserted and rendered for me so we'll add a class
+        //         // that has a corresponding CSS transition.
+        //         oldView.el.classList.add('animateOut');
+        //         // give it time to finish (yes there are other ways to do this)
+        //         setTimeout(cb, 600);
+        //     },
+        //     // here we provide a few things we'd like to do each time
+        //     // we switch pages in the app.
+        //     show: function (newView) {
+        //         // it's inserted and rendered for me
+        //         document.title = newView.pageTitle || 'app name';
+        //         document.body.scrollTop = 0;
+
+        //         // store an additional reference, just because
+        //         app.currentPage = newView;
+
+        //         newView.el.classList.add('animateIn');
+        //     }
+        // });
+
         return this;
     },
 
     handleNewPage: function (view) {
         // tell the view switcher to render the new one
+        console.log(view)
         this.pageSwitcher.set(view);
 
         // mark the correct nav item selected
