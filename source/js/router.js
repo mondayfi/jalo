@@ -10,7 +10,6 @@ var DetailsPage4 = require('./pages/details4');
 var DetailsPage5 = require('./pages/details5');
 var JobDetailsPage = require('./pages/job-details');
 var Modal = require('./pages/modal');
-var Menu = require('./pages/menu');
 var SettingsPage = require('./pages/settings');
 var ProfilePage = require('./pages/profile');
 var WelcomeUserPage = require('./pages/welcomeuser');
@@ -32,7 +31,6 @@ module.exports = Router.extend({
         'details4': 'detailsPage4',
         'details5': 'detailsPage5',
         'modal': 'modal',
-        'menu': 'menu',
         'jobdetails': 'jobDetails',
         'settings': 'settingsPage',
         'profile': 'profilePage',
@@ -90,12 +88,6 @@ module.exports = Router.extend({
 
     modal: function() {
         app.trigger('page', new Modal({
-            model: app.me
-        }));
-    },
-
-    menu: function() {
-        app.trigger('page', new Menu({
             model: app.me
         }));
     },

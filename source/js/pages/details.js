@@ -6,6 +6,6 @@ module.exports = PageView.extend({
     pageTitle: 'Jalo',
     template: details,
     initialize: function (spec) {
-      console.log("init");
+      console.log(spec);
     }
 });
