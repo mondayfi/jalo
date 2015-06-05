@@ -13,10 +13,11 @@
   <div class="ja-header-floating">
     <div class="ja-grid">
       <div class="ja-question">
-        <h3 class="ja-question__header ja-textaligncenter ja-h3">Paljonko maksat?</h3>
+        <h3 class="ja-question__header ja-textaligncenter ja-h3">Paljonko haluisit maksaa?</h3>
         <div class="ja-formarea__item">
           <div class="ja-rangeslider">
-            <input class="ja-rangeslider__slider" type="range" name="points" min="0" max="100">
+            <input class="ja-rangeslider__slider" type="range" name="points" value="1" min="0" max="100" data-hook="rangeslider">
+            <div class="ja-rangeslider__value"><span id="ja-rangeslider__value">1</span> €</div>
           </div>
         </div>
         <a href="/details5" class="ja-button ja-button--purple ja-question__button">Jatka</a>

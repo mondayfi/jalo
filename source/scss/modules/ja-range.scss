@@ -22,13 +22,31 @@
     display: block;
   }
 
+  &__value {
+    text-align: center;
+    background-color: $color-white;
+    @extend %ja-h3;
+    width: 100px;
+    display: block;
+    top: -1px;
+    border-bottom: 1px solid $color-black-light;
+    border-left: 1px solid $color-black-light;
+    border-right: 1px solid $color-black-light;
+    margin: 0 auto;
+    position: relative;
+    padding: 3px 10px;
+    z-index: $zindex2;
+  }
+
   &__slider {
+    display: block;
     -webkit-appearance: none;
     width: 100%;
     border-radius: 0px;
     height: 10px;
     border: 1px solid $color-black-light;
     background-color: $color-white;
+    z-index: $zindex1;
 
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
@@ -40,6 +58,7 @@
       border-radius: 100%;
       cursor: pointer;
       position: relative;
+      z-index: $zindex3;
 
       &:after {
           border: 6px solid transparent;
