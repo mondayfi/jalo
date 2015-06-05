@@ -30,10 +30,11 @@ module.exports = PageView.extend({
     },
     sendsms: function(e) {
       e.preventDefault();
+      app.navigate('details6')
       $.ajax({
         url: 'http://rest.nexmo.com/sms/xml?api_key=226a94e0&api_secret=c30f095e&from=358401234567&to=358404869209&text=Sinulle%20on%20l%C3%A4hetty%20ty%C3%B6%20Jalosta%3A%20http%3A%2F%2Fjalo-proto.herokuapp.com%2Fjobdetails .',
         type: 'GET',
-        success: function(data) { app.navigate('details6') }
+        success: function(data) { }
      });
     }
 });
