@@ -12,7 +12,8 @@ var bodyTmpl = require('../templates/includes/body.hbs');
 var headTmpl = require('../templates/includes/head.hbs');
 var MenuDialog = require('./dialogs/menu');
 var WorklistDialog = require('./dialogs/worklist');
-
+var MapDialog = require('./dialogs/map');
+var JobConfirmedDialog = require('./dialogs/job-confirmed');
 
 module.exports = View.extend({
     template: bodyTmpl,
@@ -24,7 +25,9 @@ module.exports = View.extend({
     events: {
         'click a[href]': 'handleLinkClick',
         'click [data-hook=menu-open]': 'handleMenuOpenClick',
-        'click [data-hook=worklist-open]': 'handleWorkListOpenClick'
+        'click [data-hook=worklist-open]': 'handleWorkListOpenClick',
+        'click [data-hook=map-open]': 'handleMapOpenClick',
+        'click [data-hook=jobconfirmed-open]': 'handleJobConfirmedOpenClick'
     },
     render: function () {
         var self = this;
@@ -136,8 +139,19 @@ module.exports = View.extend({
         this.showModal(worklistDialog);
     },
 
+    handleMapOpenClick: function (e) {
+        e.preventDefault();
+        var mapDialog =  new MapDialog();
+        this.showModal(mapDialog);
+    },
+
+    handleJobConfirmedOpenClick: function (e) {
+        e.preventDefault();
+        var jobConfirmedDialog =  new JobConfirmedDialog();
+        this.showModal(jobConfirmedDialog);
+    },
+
     updateActiveNav: function () {
-      console.log("updateActiveNav")
         var path = window.location.pathname.slice(1);
 
         this.queryAll('.ja-nav a[href]').forEach(function (aTag) {

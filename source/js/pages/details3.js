@@ -22,7 +22,6 @@ module.exports = PageView.extend({
 
     },
     buttonState: function() {
-      console.log("did you come here?")
       var element = document.getElementById('ja-question-upload');
       dom.addClass(element, 'ja-button--purple');
       dom.removeClass(element, 'ja-button--grey');
