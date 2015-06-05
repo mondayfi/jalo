@@ -8,6 +8,7 @@ var DetailsPage2 = require('./pages/details2');
 var DetailsPage3 = require('./pages/details3');
 var DetailsPage4 = require('./pages/details4');
 var DetailsPage5 = require('./pages/details5');
+var DetailsPage6 = require('./pages/details6');
 var JobDetailsPage = require('./pages/job-details');
 var SettingsPage = require('./pages/settings');
 var ProfilePage = require('./pages/profile');
@@ -29,6 +30,7 @@ module.exports = Router.extend({
         'details3': 'detailsPage3',
         'details4': 'detailsPage4',
         'details5': 'detailsPage5',
+        'details6': 'detailsPage6',
         'jobdetails': 'jobDetails',
         'settings': 'settingsPage',
         'profile': 'profilePage',
@@ -80,6 +82,12 @@ module.exports = Router.extend({
 
     detailsPage5: function() {
         app.trigger('page', new DetailsPage5({
+            model: app.me
+        }));
+    },
+
+    detailsPage6: function() {
+        app.trigger('page', new DetailsPage6({
             model: app.me
         }));
     },

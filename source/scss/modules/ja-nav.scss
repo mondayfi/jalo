@@ -12,9 +12,10 @@
     }
 
     &--sub {
+      margin-top: $element-margin;
       @extend %ja-h3;
-      text-transform: capitalize;
       font-weight: 300;
+      text-transform: none;
     }
   }
 }
