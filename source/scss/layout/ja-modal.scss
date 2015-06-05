@@ -12,6 +12,10 @@
     -webkit-overflow-scrolling: touch;
     padding: 70px 10px 50px;
     position: relative;
+
+    &--no-padding {
+      padding: $topnav-height 0 0 0;
+    }
   }
 
   &--purple {
