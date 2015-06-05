@@ -1,0 +1,110 @@
+.ja-image-uploader {
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  transition: .3s all ease .3s;
+  transform: translate3d(0%, 0%, 0);
+  position: relative;
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    border: solid transparent;
+    border-width: 0 0 60px 0;
+    opacity: .0;
+    filter: alpha(opacity= 0);
+    direction: ltr;
+    cursor: pointer;
+  }
+
+  &__button {
+    width: 100%;
+    @include input($color-purple);
+    border: none;
+    border-radius: 50px;
+    padding: 18px 0;
+    height: 59px;
+    cursor: pointer;
+    transition: .3s all ease;
+    position: relative;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__label {
+    @extend %ja-h4;
+    max-height: 40px;
+    transition: .3s all ease;
+
+    &__icon {
+      display: inline-block;
+      vertical-align: middle;
+      @include font-size(24);
+    }
+  }
+
+  &__fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    background: #8e44ad;
+    border-radius: 50px;
+  }
+
+  &__icon {
+    @include font-size(24);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scale(0);
+    line-height: 59px;
+  }
+
+  &--clicked {
+    .ja-image-uploader {
+      &__button {
+        background: #ccc;
+      }
+
+      &__label {
+        max-height: 0;
+        overflow: hidden;
+      }
+
+      &__fill {
+        width: 100%;
+        transition: 2s all ease .6s;
+      }
+    }
+  }
+
+  &--success {
+    .ja-image-uploader {
+      &__label {
+        display: none;
+      }
+
+      &__button {
+        margin: 0;
+        width: 50px;
+      }
+
+      &__icon {
+        transform: scale(1);
+        transition: .3s all ease .3s;
+      }
+    }
+  }
+}

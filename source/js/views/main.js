@@ -10,6 +10,8 @@ var domify = require('domify');
 var localLinks = require('local-links');
 var bodyTmpl = require('../templates/includes/body.hbs');
 var headTmpl = require('../templates/includes/head.hbs');
+var MenuDialog = require('./dialogs/menu');
+var WorklistDialog = require('./dialogs/worklist');
 
 
 module.exports = View.extend({
@@ -20,9 +22,12 @@ module.exports = View.extend({
         this.listenTo(app, 'page', this.handleNewPage);
     },
     events: {
-        'click a[href]': 'handleLinkClick'
+        'click a[href]': 'handleLinkClick',
+        'click [data-hook=menu-open]': 'handleMenuOpenClick',
+        'click [data-hook=worklist-open]': 'handleWorkListOpenClick'
     },
     render: function () {
+        var self = this;
         // some additional stuff we want to add to the document head
         document.head.appendChild(domify(headTmpl()));
 
@@ -43,6 +48,16 @@ module.exports = View.extend({
 
                 // store an additional reference, just because
                 app.currentPage = newView;
+            }
+        });
+        this.modalSwitcher = new ViewSwitcher(this.queryByHook("modal-container"), {
+            show: function (view) {
+                dom.addClass(document.body, "has-modal");
+                view.listenTo(view, "dialog:closed", function () {
+                    self.modalSwitcher.clear();
+                });
+            }, hide: function () {
+                dom.removeClass(document.body, "has-modal");
             }
         });
 
@@ -77,8 +92,10 @@ module.exports = View.extend({
     },
 
     handleNewPage: function (view) {
+        if (this.modalSwitcher.current) {
+            this.modalSwitcher.clear();
+        }
         // tell the view switcher to render the new one
-        console.log(view)
         this.pageSwitcher.set(view);
 
         // mark the correct nav item selected
@@ -102,10 +119,28 @@ module.exports = View.extend({
         }
     },
 
+    showModal: function (view, done) {
+        view.listenTo(view, "dialog:closed", done);
+        this.modalSwitcher.set(view);
+    },
+
+    handleMenuOpenClick: function (e) {
+        e.preventDefault();
+        var menuDialog =  new MenuDialog();
+        this.showModal(menuDialog);
+    },
+
+    handleWorkListOpenClick: function (e) {
+        e.preventDefault();
+        var worklistDialog =  new WorklistDialog();
+        this.showModal(worklistDialog);
+    },
+
     updateActiveNav: function () {
+      console.log("updateActiveNav")
         var path = window.location.pathname.slice(1);
 
-        this.queryAll('.nav a[href]').forEach(function (aTag) {
+        this.queryAll('.ja-nav a[href]').forEach(function (aTag) {
             var aPath = aTag.pathname.slice(1);
 
             if ((!aPath && !path) || (aPath && path.indexOf(aPath) === 0)) {

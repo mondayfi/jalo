@@ -1,5 +1,11 @@
 .ja-modal {
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: $zindex9;
+  background: $color-white;
 
   &__content {
     overflow: scroll;

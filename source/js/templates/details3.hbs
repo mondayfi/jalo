@@ -3,7 +3,7 @@
     <a href="/" class="ja-topnav__logo"><div class="ja-topnav__logoinner"><img src="images/jalo_logo_noiconwhite.svg" alt="" class="ja-topnav__logoimg"></div></a>
     <div class="ja-topnav__right">
       <div class="ja-topnav__item">
-        <a class="ja-icon--hamburger ja-topnav__hamburger" href="/menu"></a>
+        <a class="ja-icon--hamburger ja-topnav__hamburger" data-hook="menu-open"></a>
       </div>
       <div class="ja-topnav__item">
         <a class="ja-topnav__login ja-h4" href="/profile"><i class="ja-topnav__login__icon ja-icon--person"></i> Omat</a>
@@ -15,16 +15,18 @@
       <div class="ja-question">
         <h3 class="ja-question__header ja-textaligncenter ja-h3">Lisää kuva</h3>
         <div class="ja-formarea__item">
-          <div href="#" class="ja-select">
-            <select class="ja-select__select">
-              <option selected="selected" value="Valitse">Valitse</option>
-              <option value="volvo">Ei oo kuvaa</option>
-              <option value="saab">Ootas kun otan</option>
-              <option value="mercedes">Juupajuu</option>
-            </select>
-          </div>
+          <form data-hook="form-upload">
+            <div id="ja-image-uploader" class="ja-image-uploader" data-hook="ja-image-uploader">
+              <button class="ja-image-uploader__button">
+                <span class="ja-image-uploader__label"><i class="ja-icon--camera ja-image-uploader__label__icon"></i> Ota kuva</span>
+                <div class="ja-image-uploader__fill"></div>
+                <div class="ja-icon--check ja-image-uploader__icon"></div>
+                <input type="file" class="ja-image-uploader__input" name="image-upload"/>
+              </button>
+            </div>
+          </form>
         </div>
-        <a href="/details4" class="ja-button ja-button--purple ja-question__button">Jatka</a>
+        <a href="/details4" class="ja-button ja-button--grey ja-question__button" id="ja-question-upload">Jatka</a>
       </div>
     </div>
   </div>
