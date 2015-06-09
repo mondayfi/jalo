@@ -26,7 +26,7 @@ var startServer = function() {
 		stopServer();
 	}
 	var args = ['--', config.processFile];
-	serviceProcess =  spawn('iojs', args, {cwd: config.folder});
+	serviceProcess =  spawn('node --harmony', args, {cwd: config.folder});
 
 	serviceProcess.stdout.setEncoding('utf8');
 	serviceProcess.stdout.on('data', function (data) {
