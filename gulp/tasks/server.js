@@ -25,8 +25,8 @@ var startServer = function() {
 	if(serviceProcess) {
 		stopServer();
 	}
-	var args = ['--', config.processFile];
-	serviceProcess =  spawn('node --harmony', args, {cwd: config.folder});
+	var args = ['--', config.processFile, '--harmony'];
+	serviceProcess =  spawn('node', args, {cwd: config.folder});
 
 	serviceProcess.stdout.setEncoding('utf8');
 	serviceProcess.stdout.on('data', function (data) {
