@@ -19,10 +19,24 @@ Git clone to clone the repo to local machine. Run install commands documented be
 > git clone git@bitbucket.org:mondaydigital/jalo.git
 > cd jalo
 > npm install
-> bower install
 ```
 
-### Run browser-sync
+### Io.js
+
+The backend is written with io.js. You have to install it separately. You need to install NVM to use io.js. 
+
+```
+
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash
+``
+
+Then in jalo folder type 
+
+`NVM use iojs`
+
+
+
+### Run server
 
 ```
 gulp watch
