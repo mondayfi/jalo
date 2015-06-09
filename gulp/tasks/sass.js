@@ -1,5 +1,4 @@
 var gulp         = require('gulp');
-var browserSync  = require('browser-sync');
 var sass         = require('gulp-sass');
 var rename       = require('gulp-rename');
 var sourcemaps   = require('gulp-sourcemaps');
@@ -13,6 +12,5 @@ gulp.task('sass', function () {
     .on('error', handleErrors)
     .pipe(autoprefixer({ browsers: ['last 2 version'] }))
     .pipe(rename('main.css'))
-    .pipe(gulp.dest(config.dest))
-    .pipe(browserSync.reload({stream:true}));
+    .pipe(gulp.dest(config.dest));
 });
