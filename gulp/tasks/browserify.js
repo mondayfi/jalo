@@ -6,7 +6,6 @@
    See browserify.bundleConfigs in gulp/config.js
 */
 var browserify            = require('browserify');
-var browserSync           = require('browser-sync');
 var watchify              = require('watchify');
 var mergeStream           = require('merge-stream');
 var bundleLogger          = require('../util/bundleLogger');
@@ -48,10 +47,7 @@ var browserifyTask = function(devMode) {
         // desired output filename here.
         .pipe(source(bundleConfig.outputName))
         // Specify the output destination
-        .pipe(gulp.dest(bundleConfig.dest))
-        .pipe(browserSync.reload({
-          stream: true
-        }));
+        .pipe(gulp.dest(bundleConfig.dest));
     };
 
     if(devMode) {
