@@ -28,11 +28,14 @@ The backend is written with io.js. You have to install it separately. You need t
 ```
 
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash
-``
+```
 
 Then in jalo folder type 
 
-`NVM use iojs`
+```
+nvm use iojs
+
+```
 
 
 
